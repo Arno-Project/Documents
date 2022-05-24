@@ -179,3 +179,31 @@ Path=styles/fonts/
 	\centering\includegraphics[width=#2]{figs/#1}\end{wrapfigure}}
 
 
+
+\newcommand{\usecase}[9]{
+\begin{table}
+	\centering
+	\begin{tabular}{|p{0.15\linewidth}|p{0.8\linewidth}|} 
+		\hline
+		\multicolumn{2}{|c|}{مورد کاربرد: {#1}}  \\ 
+		\hline
+		شناسه           &     #2                   \\ 
+		\hline
+		توضیح مختصر     &     #3                   \\ 
+		\hline
+		کنشگرهای اصلی  &     #4                   \\ 
+		\hline
+		کنشگرهای ثانویه &    #5                    \\ 
+		\hline
+		پیش‌نیازها      &     #6                   \\ 
+		\hline
+		روند اصلی       &    #7                    \\ 
+		\hline
+		پس‌نیاز‌ها      &     #8                   \\ 
+		\hline
+		روند جایگزین    &   #9            \\
+		\hline
+	\end{tabular}
+\end{table}
+	
+}
