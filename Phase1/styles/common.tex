@@ -11,6 +11,10 @@
 \usepackage{geometry,fancyhdr}
 \usepackage[mathscr]{euscript}
 \usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{longtable}
 
 \usepackage{algorithmicx,algorithm}
 
@@ -179,3 +183,15 @@ Path=styles/fonts/
 	\centering\includegraphics[width=#2]{figs/#1}\end{wrapfigure}}
 
 
+\newcommand{\glossaryEntry}[4]{
+	#1
+	&
+	\textbf{معنا} \hspace{1.53cm} #3
+
+	\textbf{مترادف} \hspace{1cm} #3
+	
+	\textbf{متشابه}\hspace{1.28cm} #4
+	\\
+	\hline
+	
+}
