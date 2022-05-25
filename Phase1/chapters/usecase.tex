@@ -95,7 +95,7 @@
 	\item
 	کاربر احراز هویت شده و وارد حساب کاربری خود می‌شود.
 \end{enumerate}
-}{اگر اطلاعات وارد شده درست باشد، کاربر وارد حساب کاربی خود می‌شود.}
+}{اگر اطلاعات وارد شده درست باشد، کاربر وارد حساب کاربری خود می‌شود.}
 {	
 	
 	\begin{itemize}
@@ -366,5 +366,319 @@
 
 
 \subsection{زیرسیستم بازخورد}
+
+
+\usecase
+% name
+{
+	ارزیابی سرویس دریافت شده
+}
+% id
+{}
+% brief description
+{
+	مشتری سرویسی که از متخصص دریافت کرده است را ارزیابی می‌کند و بازخورد می‌دهد.
+}
+% primary actos
+{
+	مشتری
+}
+% secondary actors
+{}
+% preconditons
+{
+		\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+		مشتری در سیستم لاگین کرده باشد.
+	\end{itemize}
+}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+		مشتری لیست سرویس‌هایی که دریافت کرده است را مشاهده می‌کند.
+		\item
+		مشتری یکی از سرویس‌هایی که دریافت کرده را انتخاب می‌کند.
+		\item
+		\textbf{تا زمانی که} حداقل یک معیار ارزیابی وجود دارد که کاربر بازخورد خود نسبت به آن را ثبت نکرده است:
+		
+		\begin{enumerate}[label=\theenumi.\arabic*.]
+			\item
+سیستم معیار ارزیابی و توضیحات مربوط به آن را به کاربر نشان می‌دهد.
+			\item 
+کاربر به سرویس ارائه شده بین ۰.۵ تا ۵ ستاره برای آن معیار می‌دهد.
+			\item 
+			\textbf{اگر} کاربر تمایل به ارائه‌ی توضیحات داشت:
+			\begin{enumerate}
+				\item 
+				کاربر توضیحات مدنظر درباره‌ی معیار را وارد می‌کند. 
+			\end{enumerate}
+			\item 
+			سیستم امتیاز و نظر را ثبت می‌کند.
+		\end{enumerate}
+		\item
+		سیستم امتیازها و نظرات ثبت شده را ذخیره می‌کند.
+		\item
+	سیستم ذخیره‌ی موفق بازخوردها را به اطلاع کاربر می‌رساند.
+		
+	\end{enumerate}
+}
+% postconditions
+{
+امتیازها و نظرات کاربر در سیستم ذخیره می‌شوند.
+}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+		انصراف
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: ارزیابی سرویس دریافت شده
+}
+
+
+
+
+\alternativeflow
+% name
+{
+ارزیابی سرویس دریافت شده: انصراف
+}
+% id
+{}
+% brief description
+{
+مشتری از ارائه‌ی بازخورد نسبت به سرویس دریافت شده منصرف می‌شود.
+}
+% primary actos
+{
+	مشتری
+}
+% secondary actors
+{}
+% preconditons
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+		مشتری در سیستم لاگین کرده باشد.
+		\item
+		مشتری از ارائه‌ی بازخورد منصرف شده باشد.
+	\end{itemize}
+}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+		روند جایگزین می‌تواند هر موقع آغاز شود.
+		\item
+		مشتری از ارائه‌ی بازخورد انصراف می‌دهد.
+	\end{enumerate}
+}
+% postconditions
+{
+امتیاز و نظرات کاربر ثبت نمی‌شود.
+}
+% alternative flows
+{
+}
+% table name
+{
+روند جایگزین: ارزیابی سرویس دریافت شده : انصراف
+}
+
+
+
+\usecase
+% name
+{
+	ارزیابی سرویس ارائه شده
+}
+% id
+{}
+% brief description
+{}
+% primary actos
+{}
+% secondary actors
+{}
+% preconditons
+{}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+}
+% postconditions
+{}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: ارزیابی سرویس ارائه شده
+}
+
+
+\usecase
+% name
+{
+مشاهده لیست معیارهای ارزیابی
+}
+% id
+{}
+% brief description
+{}
+% primary actos
+{}
+% secondary actors
+{}
+% preconditons
+{}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+}
+% postconditions
+{}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: مشاهده لیست معیارهای ارزیابی
+}
+
+
+
+\usecase
+% name
+{
+	 اضافه کردن معیار ارزیابی
+}
+% id
+{}
+% brief description
+{}
+% primary actos
+{}
+% secondary actors
+{}
+% preconditons
+{}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+}
+% postconditions
+{}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: اضافه کردن معیار ارزیابی
+}
+
+
+
+\usecase
+% name
+{
+حذف معیار ارزیابی
+}
+% id
+{}
+% brief description
+{}
+% primary actos
+{}
+% secondary actors
+{}
+% preconditons
+{}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+}
+% postconditions
+{}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: ویرایش معیار ارزیابی
+}
+
+
+\usecase
+% name
+{}
+% id
+{}
+% brief description
+{}
+% primary actos
+{}
+% secondary actors
+{}
+% preconditons
+{}
+% main flow
+{
+	\vspace*{-0.6cm}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+}
+% postconditions
+{}
+% alternative flows
+{
+	\begin{itemize}
+		\vspace*{-0.6cm}
+		\item 
+	\end{itemize}
+}
+% table name
+{
+	مورد کاربرد: حذف معیار ارزیابی
+}
+
 
 \subsection{زیرسیستم گزارش‌گیری}

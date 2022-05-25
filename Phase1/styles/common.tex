@@ -228,3 +228,49 @@ Path=styles/fonts/
 	\end{singlespace}
 
 }
+
+
+
+\newcommand{\alternativeflow}[9]{
+	\def\tempa{#1}%
+	\def\tempb{#2}%
+	\def\tempc{#3}%
+	\def\tempd{#4}%
+	\def\tempe{#5}%
+	\def\tempf{#6}%
+	\def\tempg{#7}%
+	\def\temph{#8}%
+	\def\tempi{#9}%
+	
+	\alternativeflowcontinue
+}
+
+\newcommand\alternativeflowcontinue[1]{%
+	\begin{singlespace}
+		\begin{table}[h]
+			\setlength\extrarowheight{-5pt}
+			\centering
+			\begin{tabular}{|p{0.18\linewidth}|p{0.82\linewidth}|} 
+				\hline
+				\multicolumn{2}{|c|}{روند جایگزین: {\tempa}}  \\ 
+				\hline
+				شناسه           &     \tempb                   \\ 
+				\hline
+				توضیح مختصر     &     \tempc                   \\ 
+				\hline
+				کنشگرهای اولیه  &     \tempd                   \\ 
+				\hline
+				کنشگرهای ثانویه &    \tempe                    \\ 
+				\hline
+				پیش‌نیازها      &     \tempf                  \\ 
+				\hline
+				روند اصلی       &    \tempg                    \\ 
+				\hline
+				پس‌نیاز‌ها      &     \temph                   \\ 
+				\hline
+			\end{tabular}
+			\caption{#1}	
+		\end{table}
+	\end{singlespace}
+	
+}
