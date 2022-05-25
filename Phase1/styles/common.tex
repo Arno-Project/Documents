@@ -14,7 +14,11 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{setspace}
+
+\usepackage{placeins}
+
 \usepackage{longtable}
+
 
 \usepackage{algorithmicx,algorithm}
 
@@ -185,6 +189,101 @@ Path=styles/fonts/
 
 
 
+\newcommand{\usecase}[9]{
+	\def\tempa{#1}%
+	\def\tempb{#2}%
+	\def\tempc{#3}%
+	\def\tempd{#4}%
+	\def\tempe{#5}%
+	\def\tempf{#6}%
+	\def\tempg{#7}%
+	\def\temph{#8}%
+	\def\tempi{#9}%
+
+\usecasecontinue
+}
+
+\newcommand\usecasecontinue[1]{%
+	\begin{singlespace}
+		\begin{table}[ht!]
+			\setlength\extrarowheight{-5pt}
+			\centering
+			\begin{tabular}{|p{0.18\linewidth}|p{0.82\linewidth}|} 
+				\hline
+				\multicolumn{2}{|c|}{مورد کاربرد: {\tempa}}  \\ 
+				\hline
+				شناسه           &     \tempb                   \\ 
+				\hline
+				توضیح مختصر     &     \tempc                   \\ 
+				\hline
+				کنشگرهای اولیه  &     \tempd                   \\ 
+				\hline
+				کنشگرهای ثانویه &    \tempe                    \\ 
+				\hline
+				پیش‌نیازها      &     \tempf                  \\ 
+				\hline
+				روند اصلی       &    \tempg                    \\ 
+				\hline
+				پس‌نیاز‌ها      &     \temph                   \\ 
+				\hline
+				روند جایگزین    &  \tempi            \\
+				\hline
+			\end{tabular}
+			\caption{#1}	
+		\end{table}
+	\end{singlespace}
+\FloatBarrier
+\newpage
+}
+
+
+
+\newcommand{\alternativeflow}[8]{
+	\def\tempa{#1}%
+	\def\tempb{#2}%
+	\def\tempc{#3}%
+	\def\tempd{#4}%
+	\def\tempe{#5}%
+	\def\tempf{#6}%
+	\def\tempg{#7}%
+	\def\temph{#8}%
+	
+	\alternativeflowcontinue
+}
+
+\newcommand\alternativeflowcontinue[1]{%
+	\begin{singlespace}
+		\begin{table}[ht!]
+			\setlength\extrarowheight{-5pt}
+			\centering
+			\begin{tabular}{|p{0.18\linewidth}|p{0.82\linewidth}|} 
+				\hline
+				\multicolumn{2}{|c|}{روند جایگزین: {\tempa}}  \\ 
+				\hline
+				شناسه           &     \tempb                   \\ 
+				\hline
+				توضیح مختصر     &     \tempc                   \\ 
+				\hline
+				کنشگرهای اولیه  &     \tempd                   \\ 
+				\hline
+				کنشگرهای ثانویه &    \tempe                    \\ 
+				\hline
+				پیش‌نیازها      &     \tempf                  \\ 
+				\hline
+				روند اصلی       &    \tempg                    \\ 
+				\hline
+				پس‌نیاز‌ها      &     \temph                   \\ 
+				\hline
+			\end{tabular}
+			\caption{#1}	
+		\end{table}
+	\end{singlespace}
+\FloatBarrier
+\newpage
+	
+}
+
+
 \newcommand{\glossaryTitle}[1]{
 	\hline
 	\hline
@@ -217,4 +316,5 @@ Path=styles/fonts/
 	 ۱۴۰۱/#1 & #2\\
 	\hline
 }
+
 
