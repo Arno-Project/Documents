@@ -1,4 +1,3 @@
-
 %--------------------------------------------------------------------------
 %
 %  OOD Project
@@ -25,64 +24,64 @@
 \input{styles/custom.tex}
 
 \begin{document}
-
-
-% -------------------- Front Pages --------------------
-
-%\pagenumbering{alph}
-
-\input{front/info.tex}
-\input{front/template/title.tex}
-
-\input{front/template/besmellah.tex}
-
-% Uncomment the following line for adding signature page
-
-
-% -------------------- Table of Contents --------------------
-
-
-\pagestyle{fancy}
-
-\tableofcontents \newpage
-\listoffigures \newpage
-\listoftables \newpage
-
-%\pagenumbering{arabic}
-
-% -------------------- Chapters --------------------
-
-\include{chapters/intro}
-\include{chapters/requirements}
-\include{chapters/risks}
-\include{chapters/usecase}
-\include{chapters/calendar}
-
-
-
-% -------------------- Appendices --------------------
-
-\begin{appendix}
-\include{chapters/changelog}
-\include{chapters/dictionary}
-
-\input{front/dictionary2}
-\end{appendix}
-
-% -------------------- Bibliography --------------------
-
-
-% \input{bibs/bibs.tex}
-
-
-% -------------------- English Pages --------------------
-
-
-% \newgeometry{left=3cm,right=2.5cm}
-
-
-
-
-% -------------------- The End! --------------------
-
+	
+	
+	% -------------------- Front Pages --------------------
+	
+	%\pagenumbering{alph}
+	
+	\input{front/info.tex}
+	\input{front/template/title.tex}
+	
+	\input{front/template/besmellah.tex}
+	
+	% Uncomment the following line for adding signature page
+	
+	
+	% -------------------- Table of Contents --------------------
+	
+	
+	\pagestyle{fancy}
+	
+	\tableofcontents \newpage
+	\listoffigures \newpage
+	\listoftables \newpage
+	
+	%\pagenumbering{arabic}
+	
+	% -------------------- Chapters --------------------
+	
+	\include{chapters/intro}
+	\include{chapters/requirements}
+	\include{chapters/risks}
+	\include{chapters/usecase}
+	\include{chapters/calendar}
+	
+	
+	
+	% -------------------- Appendices --------------------
+	
+	\begin{appendix}
+		\include{chapters/changelog}
+		\include{chapters/glossary}
+		
+		\input{front/dictionary}
+	\end{appendix}
+	
+	% -------------------- Bibliography --------------------
+	
+	
+	% \input{bibs/bibs.tex}
+	
+	
+	% -------------------- English Pages --------------------
+	
+	
+	% \newgeometry{left=3cm,right=2.5cm}
+	
+	
+	
+	
+	% -------------------- The End! --------------------
+	
 \end{document}
