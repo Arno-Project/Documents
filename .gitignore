@@ -323,3 +323,9 @@ TSWLatexianTemp*
 !Phase3/Figs/*.pdf
 !Phase4/Figs/*.pdf
 !Phase5/Figs/*.pdf
+
+!Phase1/Figs/**/*.pdf
+!Phase2/Figs/**/*.pdf
+!Phase3/Figs/**/*.pdf
+!Phase4/Figs/**/*.pdf
+!Phase5/Figs/**/*.pdf
