@@ -14,6 +14,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{placeins}
 
 \usepackage{algorithmicx,algorithm}
 
@@ -199,7 +200,7 @@ Path=styles/fonts/
 
 \newcommand\usecasecontinue[1]{%
 	\begin{singlespace}
-		\begin{table}[h]
+		\begin{table}[ht!]
 			\setlength\extrarowheight{-5pt}
 			\centering
 			\begin{tabular}{|p{0.18\linewidth}|p{0.82\linewidth}|} 
@@ -226,7 +227,8 @@ Path=styles/fonts/
 			\caption{#1}	
 		\end{table}
 	\end{singlespace}
-
+\FloatBarrier
+\newpage
 }
 
 
@@ -246,7 +248,7 @@ Path=styles/fonts/
 
 \newcommand\alternativeflowcontinue[1]{%
 	\begin{singlespace}
-		\begin{table}[h]
+		\begin{table}[ht!]
 			\setlength\extrarowheight{-5pt}
 			\centering
 			\begin{tabular}{|p{0.18\linewidth}|p{0.82\linewidth}|} 
@@ -271,5 +273,7 @@ Path=styles/fonts/
 			\caption{#1}	
 		\end{table}
 	\end{singlespace}
+\FloatBarrier
+\newpage
 	
 }
