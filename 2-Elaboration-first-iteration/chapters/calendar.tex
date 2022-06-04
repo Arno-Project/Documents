@@ -1,0 +1,557 @@
+
+\chapter{برنامه زمانی فازها}
+
+
+با توجه به این که قرار است تمامی اعضای گروه در انجام تمامی قسمت‌ها مشارکت داشته باشند، نام افراد ذکر نشده است.
+
+
+
+
+\section{تحلیل مقدماتی - تکرار اول}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{1}
+		{تخمین زمانی برای پروژه}
+		{1}
+		{2/30}
+		{2/30}
+		{}
+		\calendarEntry
+		{2}
+		{تهیه قالب مستندات}
+		{0.5}
+		{2/31}
+		{2/31}
+		{}
+		
+		\calendarEntry
+		{3}
+		{تهیه لیست ریسک‌ها}
+		{0.5}
+		{2/31}
+		{2/31}
+		{1}
+		
+			\calendarEntry
+		{4}
+		{تهیه لیست نیازمندی‌ها}
+		{0.5}
+		{3/1}
+		{3/1}
+		{1}
+		
+			\calendarEntry
+		{5}
+		{اولویت بندی نیازمندی‌ها و ریسک‌ها}
+		{0.5}
+		{3/1}
+		{3/1}
+		{3,4}
+		
+		
+			\calendarEntry
+		{6}
+		{رسم نمودار موارد کاربرد}
+		{0.5}
+		{3/2}
+		{3/2}
+		{5}
+		
+					\calendarEntry
+		{7}
+		{جزییات موارد کاربرد}
+		{2}
+		{3/2}
+		{3/4}
+		{6}
+		
+					\calendarEntry
+		{8}
+		{تکمیل واژه‌نامه و موارد باقی‌مانده مستندات}
+		{0.5}
+		{3/4}
+		{3/4}
+		{7}
+		
+		
+	\end{tabular}
+\end{table}
+
+
+
+\section{تحلیل تفصیلی - تکرار اول}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{9}
+		{بروزرسانی ریسک‌ها، نیازمندی‌ها و زمان‌بندی}
+		{1}
+		{3/5}
+		{3/5}
+		{3,4,1}
+		
+				\calendarEntry
+		{10}
+		{تهیه \lr{Architecturally Significant Requirements}}
+		{1}
+		{3/6}
+		{3/6}
+		{9}
+		
+		
+						\calendarEntry
+		{11}
+		{\lr{Use Case Realization}}
+		{2}
+		{3/7}
+		{3/9}
+		{10}
+		
+		
+		
+				
+		\calendarEntry
+		{12}
+		{کارت‌های \lr{CRC}}
+		{1}
+		{3/9}
+		{3/10}
+		{11}
+		
+		
+			\calendarEntry
+		{13}
+		{پیاده‌سازی \lr{Executable Architectural Baseline}}
+		{4}
+		{3/10}
+		{3/14}
+		{12}
+		
+		
+					\calendarEntry
+		{14}
+		{ارزیابی دستاورد‌های تکرار}
+		{0.5}
+		{3/15}
+		{3/15}
+		{13}
+		
+		
+				
+		\calendarEntry
+		{15}
+		{تکمیل مستندات}
+		{0.5}
+		{3/15}
+		{3/15}
+		{14}
+		
+		
+		
+		
+
+	\end{tabular}
+\end{table}
+
+\newpage
+
+\section{تحلیل تفصیلی - تکرار دوم}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{16}
+		{بروزرسانی محصولات نیازمندی فاز قبل}
+		{0.5}
+		{3/16}
+		{3/16}
+		{15}
+		
+
+		\calendarEntry
+{17}
+{تهیه واسط کاربری قابل اجرا و تصویر از آن}
+{2.5}
+{3/16}
+{3/18}
+{16}
+	
+	
+			\calendarEntry
+	{18}
+	{بروزرسانی محصولات تحلیل فاز قبل}
+	{1}
+	{3/18}
+	{3/19}
+	{16}
+	
+	
+	
+				\calendarEntry
+	{19}
+	{تهیه نمودار فعالیت با خطوط شنا}
+	{2}
+	{3/19}
+	{3/21}
+	{18}
+	
+	
+					\calendarEntry
+	{20}
+	{نمودار کلاس تحلیل}
+	{1}
+	{3/21}
+	{3/22}
+	{19}
+	
+	
+					\calendarEntry
+	{21}
+	{نمودار توالی تحلیل}
+	{1}
+	{3/22}
+	{3/23}
+	{19}
+	
+	
+					\calendarEntry
+	{22}
+	{نمودار بسته}
+	{1}
+	{3/23}
+	{3/24}
+	{20,21}
+	
+	
+					\calendarEntry
+	{23}
+	{ارزیابی دستاورد‌های تکرار}
+	{0.5}
+	{3/24}
+	{3/24}
+	{22}
+	
+	
+	
+	\calendarEntry
+	{24}
+	{تکمیل مستندات}
+	{1.5}
+	{3/24}
+	{3/26}
+	{23}
+		
+		
+		
+	\end{tabular}
+\end{table}
+
+\newpage
+
+
+\section{تحلیل تفصیلی - تکرار سوم}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{25}
+		{بروزرسانی محصولات نیازمندی فاز قبل}
+		{0.5}
+		{3/26}
+		{3/26}
+		{24}
+		
+		
+				\calendarEntry
+		{26}
+		{بروزرسانی محصولات تحلیل فاز قبل}
+		{0.5}
+		{3/26}
+		{3/26}
+		{24}
+
+
+
+				\calendarEntry
+{27}
+{نمودار کلاس طراحی}
+{4}
+{3/26}
+{3/30}
+{26}
+
+				\calendarEntry
+{28}
+{نمودار مولفه}
+{2}
+{4/16}
+{4/18}
+{27}
+
+				\calendarEntry
+{28}
+{نمودار توالی طراحی}
+{2}
+{4/18}
+{4/20}
+{27}
+		
+		
+						\calendarEntry
+		{29}
+		{تکمیل \lr{Executable Architectural Baseline}}
+		{3}
+		{4/21}
+		{4/24}
+		{28}
+		
+		
+								\calendarEntry
+		{30}
+		{ارزیابی دستاوردهای تکرار}
+		{0.5}
+		{4/25}
+		{4/25}
+		{29}
+		
+				
+		
+		\calendarEntry
+		{31}
+		{تکمیل مستندات}
+		{0.5}
+		{4/25}
+		{4/25}
+		{30}
+	\end{tabular}
+\end{table}
+
+\newpage
+\section{ساخت - تکرار اول}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{32}
+		{بروزرسانی محصولات نیازمندی فاز قبل}
+		{0.5}
+		{4/26}
+		{4/26}
+		{31}
+		
+		
+		\calendarEntry
+		{33}
+		{بروزرسانی محصولات تحلیل فاز قبل}
+		{0.5}
+		{4/26}
+		{4/26}
+		{32}
+		
+		
+			\calendarEntry
+		{34}
+		{بازنگری کلاس‌های طاحی و نمودار‌های توالی}
+		{1}
+		{4/27}
+		{4/28}
+		{33}
+		
+		
+				\calendarEntry
+		{35}
+		{تکامل سیستم اولیه}
+		{2}
+		{4/28}
+		{4/30}
+		{34}
+		
+					\calendarEntry
+		{36}
+		{توضیح الگوهای استفاده شده}
+		{0.5}
+		{4/31}
+		{4/31}
+		{35}
+		
+		
+							\calendarEntry
+		{37}
+		{تهیه شمای پایگاه داده}
+		{0.5}
+		{4/31}
+		{4/31}
+		{35}
+		
+		
+
+		
+		
+		\calendarEntry
+		{38}
+		{ارزیابی دستاوردهای تکرار}
+		{0.5}
+		{5/1}
+		{5/1}
+		{37}
+		
+		
+		
+		\calendarEntry
+		{39}
+		{تکمیل مستندات}
+		{0.5}
+		{5/1}
+		{5/1}
+		{38}
+	\end{tabular}
+\end{table}
+
+\newpage
+
+\section{ساخت - تکرار دوم}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{40}
+		{لیست بازنگری شده اولویت‌ها و ریسک‌ها}
+		{0.5}
+		{5/2}
+		{5/2}
+		{39}
+		
+		
+				\calendarEntry
+		{41}
+		{نسخه تکمیل شده \lr{Use Case Realization}}
+		{0.5}
+		{5/2}
+		{5/2}
+		{39}
+		
+		\calendarEntry
+		{42}
+		{تهیه نمودار استقرار}
+		{2}
+		{5/3}
+		{5/4}
+		{41}
+		
+		
+		\calendarEntry
+		{43}
+		{تکمیل سیستم}
+		{12}
+		{5/5}
+		{5/17}
+		{42}
+		
+			\calendarEntry
+		{44}
+		{تهیه مستند استفاده}
+		{3}
+		{5/17}
+		{5/20}
+		{43}
+		
+					\calendarEntry
+		{45}
+		{تهیه مستند نصب}
+		{2}
+		{5/20}
+		{5/22}
+		{43}
+		
+	
+		
+		
+		
+		\calendarEntry
+		{46}
+		{ارزیابی دستاوردهای تکرار}
+		{0.5}
+		{5/23}
+		{5/23}
+		{45}
+		
+		
+		
+		\calendarEntry
+		{47}
+		{تکمیل مستندات}
+		{0.5}
+		{5/23}
+		{5/23}
+		{46}
+		
+				\calendarEntry
+		{48}
+		{درستی سنجی}
+		{1}
+		{5/24}
+		{5/24}
+		{47}
+	\end{tabular}
+\end{table}
+
+\newpage
+
+\section{گذار - تکرار اول}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+		\hline
+		\calendarEntry
+		{49}
+		{تحویل نهایی}
+		{1}
+		{5/25}
+		{5/25}
+		{48}
+		
+		
+	\end{tabular}
+\end{table}
+
