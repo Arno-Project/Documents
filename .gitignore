@@ -318,14 +318,14 @@ TSWLatexianTemp*
 # End of https://www.toptal.com/developers/gitignore/api/latex,visualstudiocode
 
 
-!Phase1/Figs/*.pdf
-!Phase2/Figs/*.pdf
+!1-Inception-first-iteration/Figs/*.pdf
+!2-Elaboration-first-iteration/Figs/*.pdf
 !Phase3/Figs/*.pdf
 !Phase4/Figs/*.pdf
 !Phase5/Figs/*.pdf
 
-!Phase1/Figs/**/*.pdf
-!Phase2/Figs/**/*.pdf
+!1-Inception-first-iteration/Figs/**/*.pdf
+!2-Elaboration-first-iteration/Figs/**/*.pdf
 !Phase3/Figs/**/*.pdf
 !Phase4/Figs/**/*.pdf
 !Phase5/Figs/**/*.pdf
