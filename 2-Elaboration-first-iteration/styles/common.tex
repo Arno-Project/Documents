@@ -16,7 +16,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{setspace}
-
+\usepackage{afterpage}
 \usepackage{longtable}
 
 
@@ -193,6 +193,9 @@ Path=styles/fonts/
 
 
 
+\newcounter{usecounter}
+\newcounter{altusecounter}
+\setcounter{usecounter}{1}
 
 \newcommand{\usecase}[9]{
 	\def\tempa{#1}%
@@ -217,7 +220,7 @@ Path=styles/fonts/
 				\hline
 				\multicolumn{2}{|c|}{مورد کاربرد: {\tempa}}  \\ 
 				\hline
-				شناسه           &     \tempb                   \\ 
+				شناسه           &     \arabic{usecounter}                   \\ 
 				\hline
 				توضیح مختصر     &     \tempc                   \\ 
 				\hline
@@ -236,6 +239,8 @@ Path=styles/fonts/
 			\end{tabular}
 			\caption{#1}	
 		\end{table}
+	\stepcounter{usecounter}
+	\setcounter{altusecounter}{1}
 	\end{singlespace}
 \FloatBarrier
 \newpage
@@ -257,6 +262,7 @@ Path=styles/fonts/
 }
 
 \newcommand\alternativeflowcontinue[1]{%
+	\addtocounter{usecounter}{-1}
 	\begin{singlespace}
 		\begin{table}[ht!]
 			\setlength\extrarowheight{-5pt}
@@ -265,7 +271,7 @@ Path=styles/fonts/
 				\hline
 				\multicolumn{2}{|c|}{روند جایگزین: {\tempa}}  \\ 
 				\hline
-				شناسه           &     \tempb                   \\ 
+				شناسه           &     \arabic{altusecounter}.\arabic{usecounter}                      \\ 
 				\hline
 				توضیح مختصر     &     \tempc                   \\ 
 				\hline
@@ -282,6 +288,8 @@ Path=styles/fonts/
 			\end{tabular}
 			\caption{#1}	
 		\end{table}
+		\addtocounter{usecounter}{+1}
+		\stepcounter{altusecounter}
 	\end{singlespace}
 \FloatBarrier
 \newpage
@@ -331,6 +339,56 @@ Path=styles/fonts/
 \newcommand{\changelogEntry}[2]{
 	 ۱۴۰۱/#1 & #2\\
 	\hline
+}
+
+
+\newcommand{\cancelAlternativeFlow}[4]
+{
+	\alternativeflow
+	% name
+	{
+		#1:انصراف
+	}
+	% id
+	{#3}
+	% brief description
+	{
+		#2 از #1 منصرف می‌شود.
+	}
+	% primary actos
+	{
+		#2
+	}
+	% secondary actors
+	{}
+	% preconditons
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item 
+			#2 در سیستم لاگین کرده باشد.
+			\item
+			#2 از #1 منصرف شده باشد.
+		\end{itemize}
+	}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			روند جایگزین می‌تواند هر موقع آغاز شود.
+			\item
+			#2 از #1 انصراف می‌دهد.
+		\end{enumerate}
+	}
+	% postconditions
+	{
+		#4
+	}
+	% table name
+	{
+		روند جایگزین:#1:انصراف
+	}
 }
 
 
