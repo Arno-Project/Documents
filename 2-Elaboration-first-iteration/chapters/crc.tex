@@ -10,14 +10,44 @@
 %childs
 {}
 %description
-{}
-\crcattritem{3}
+{نمایانگر یک درخواست خدمت که توسط مشتری ثبت می‌شود.}
+\crcattritem{مشتری}
+\crcattritem{تخصص مورد نیاز}
+\crcattritem{مکان نیاز به خدمت}
+\crcattritem{زمان نیاز به خدمت}
+\crcattritem{متخصص}
 
 \crcrespheader
-\crcrespitem{وظ}{d}
+\crcrespitem{نگه‌داری تخصص مورد نیاز و مکان و زمان خدمت}{تخصص، مکان}
+\crcrespitem{ارائه تخصص مورد نیاز و مکان و زمان خدمت}{تخصص، مکان}
+\crcrespitem{ویرایش تخصص مورد نیاز و مکان و زمان خدمت}{تخصص، مکان}
+\crcrespitem{اضافه کردن متخصص}{متخصص}
+\crcrespitem{حذف متخصص}{متخصص}
+
 	\hline
 		\end{tabular}
 	\caption{کارت درخواست}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ درخواست}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست درخواست‌های ثبت شده در سیستم.}
+		
+		\crcrespheader
+		\crcrespitem{اضافه کردن درخواست جدید}{درخواست، مشتری}
+		\crcrespitem{حذف درخواست}{درخواست}
+		\crcrespitem{ارائه لیست درخواست‌ها}{درخواست}
+		\crcrespitem{جست‌وجو در درخواست‌ها}{درخواست}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ درخواست}
 \end{table}
 
 \begin{table}[ht!]
@@ -29,34 +59,59 @@
 		%childs
 		{}
 		%description
-		{}
-		\crcattritem{3}
-		
+		{نمایانگر یک تخصص قابل ارائه در سیستم}
+		\crcattritem{نام}
+		\crcattritem{توضیحات}
 		\crcrespheader
-		\crcrespitem{وظ}{d}
+		\crcrespitem{ارائه نام و توضیحات}{}
+		\crcrespitem{ویرایش نام و توضیحات}{}
 		\hline
 	\end{tabular}
 	\caption{کارت تخصص}
 \end{table}
 
+
 \begin{table}[ht!]
 	\centering
 	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
-		\crcheader	{مشکل فنی}
+		\crcheader	{معیار ارزیابی}
 		%parent
 		{}
 		%childs
 		{}
 		%description
-		{}
-		\crcattritem{3}
-		
+		{نمایانگر یک معیار ارزیابی که می‌تواند مربوط به متخصص یا مشتری باشد.}
+		\crcattritem{نام}
+		\crcattritem{توضیحات}		
+		\crcattritem{نوع کاربر مربوطه}		
 		\crcrespheader
-		\crcrespitem{وظ}{d}
+		\crcrespitem{ارائه نام و توضیحات و نوع کاربر مربوطه}{}
+		\crcrespitem{ویرایش نام و توضیحات و نوع کاربر مربوطه}{}
 		\hline
 	\end{tabular}
-	\caption{کارت مشکل فنی}
+	\caption{کارت معیار ارزیابی}
 \end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ معیارهای ارزیابی}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست معیارهای ارزیابی موجود در سیستم.}
+
+		\crcrespheader
+		\crcrespitem{ارائه‌ی لیست تمام معیارهای ارزیابی}{معیار ارزیابی}
+		\crcrespitem{اضافه کردن معیار ارزیابی جدید}{معیار ارزیابی}
+		\crcrespitem{حذف معیار ارزیابی}{معیار ارزیابی}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ معیار ارزیابی}
+\end{table}
+
 
 \begin{table}[ht!]
 	\centering
@@ -67,12 +122,62 @@
 		%childs
 		{}
 		%description
+		{نمایانگر یک بازخورد توسط یک کاربر عادی به یک متخصص یا یک مشتری.}
+		\crcattritem{معیار ارزیابی}
+		\crcattritem{امتیاز}
+		\crcattritem{توضیحات}
+		\crcattritem{مشتری}
+		\crcattritem{متخصص}
+		\crcrespheader
+		\crcrespitem{ثبت مقدار کمی امتیاز برای معیار ارزیابی}{معیار ارزیابی}
+		\crcrespitem{ثبت توضیحات برای معیار ارزیابی}{معیار ارزیابی}
+		\crcrespitem{ثبت کاربر بازخورددهنده}{کاربر عادی }
+		\crcrespitem{ثبت کاربر مورد ارزیابی}{کاربر عادی }
+		\crcrespitem{ارائه اطلاعات مربوط به بازخورد (شامل صفاتی که در بالا ذکر شده)}{معیار ارزیابی}
+		\hline
+	\end{tabular}
+	\caption{کارت بازخورد}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مشکل فنی}
+		%parent
 		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک مشکل فنی سیستم که گزارش شده است.}
 		\crcattritem{3}
 		
 		\crcrespheader
 		\crcrespitem{وظ}{d}
 		\hline
 	\end{tabular}
-	\caption{کارت بازخورد}
+	\caption{کارت مشکل فنی}
+\end{table}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مکان}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک موقعیت مکانی.}
+		\crcattritem{موقعیت جغرافیایی}
+		\crcattritem{آدرس}
+		\crcrespheader
+		\crcrespitem{نگه‌داری موقعیت جغرافیایی و آدرس}{}
+		\crcrespitem{ارائه موقعیت جغرافیایی و آدرس}{}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ درخواست}
 \end{table}
