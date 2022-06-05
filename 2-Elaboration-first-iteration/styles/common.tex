@@ -22,8 +22,7 @@
 
 \usepackage{placeins}
 
-
-
+\usepackage[table]{colortbl}
 
 \usepackage{algorithmicx,algorithm}
 
@@ -390,6 +389,38 @@ Path=styles/fonts/
 		روند جایگزین:#1:انصراف
 	}
 }
+
+
+
+
+
+
+
+\newcommand{\crcheader}[4]{%
+		\hline
+		\multicolumn{2}{|c|}{\cellcolor[gray]{.8}نام: {#1}}                                             \\ \hline
+		\multicolumn{2}{|r|}             {     \textbf{کلاس پدر: {#2} } }          \\ \hline
+		\multicolumn{2}{|r|}             {     \textbf{کلاس‌های فرزند: {#3} }   }     \\ \hline
+		\multicolumn{2}{|r|}             {     \textbf{توضیحات: {#4} }      }     \\ \hline
+		\multicolumn{2}{|r|}{\cellcolor[gray]{.8}\textbf{صفات}}                    \\ \hline
+}
+
+\newcommand{\crcattritem}[1]{%
+{#1} &                                \\ 
+}
+
+\newcommand{\crcrespheader}[0]{%
+			\hline
+			\multicolumn{1}{|r|}{\cellcolor[gray]{.8}\textbf{مسئولیت}} &{\cellcolor[gray]{.8} \textbf{همکاران}            }  \\ \hline
+	
+}
+
+\newcommand{\crcrespitem}[2]{%
+{#1}  & {#2}\\
+}
+
+
+
 
 
 
