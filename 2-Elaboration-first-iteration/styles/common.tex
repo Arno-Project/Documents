@@ -414,13 +414,17 @@ Path=styles/fonts/
 			\multicolumn{1}{|r|}{\cellcolor[gray]{.8}\textbf{مسئولیت}} &{\cellcolor[gray]{.8} \textbf{همکاران}            }  \\ \hline
 	
 }
-
 \newcommand{\crcrespitem}[2]{%
 {#1}  & {#2}\\
 }
 
 
+\newcounter{usecasecrccounter}
+\setcounter{usecasecrccounter}{0}
+\newcommand{\usecasecrcitem}[2]{%
+			 \stepcounter{usecasecrccounter}
+	 \arabic{usecasecrccounter}  & {#1}  & {#2}\\ 
+	\hline
 
-
-
+}
 
