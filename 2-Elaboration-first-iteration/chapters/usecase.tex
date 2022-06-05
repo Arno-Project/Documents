@@ -2293,6 +2293,68 @@
 \cancelAlternativeFlow{حذف معیار ارزیابی}{مدیر شرکت}{1}{معیارهای موجود تغییری نمی‌کنند.}
 }
 
+% ثبت مشکل فنی سیستم
+{
+	\usecase
+	% name
+	{
+ ثبت مشکل فنی سیستم
+	}
+	% id
+	{24}
+	% brief description
+	{
+کاربر یک مشکل فنی در سیستم را گزارش می‌دهد.
+	}
+	% primary actos
+	{
+کاربر
+	}
+	% secondary actors
+	{}
+	% preconditons
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item 
+			کاربر در سیستم لاگین کرده باشد.
+		\end{itemize}
+	}
+	% main flow
+	{
+		\begin{enumerate}
+			\item
+		کاربر گزارش مشکل فنی را انتخاب می‌کند.
+			\item 
+سیستم فرم ثبت گزارش فنی را به وی نشان می‌دهد.
+			\item 
+			کاربر عنوان و توضیحات گزارش را ثبت می‌کند.
+			\item 
+		گزارش مشکل فنی در سیستم ذخیره می‌شود.
+		\end{enumerate}
+	}
+	% postconditions
+	{
+گزارش مشکل فنی در سیستم ذخیره شده باشد.
+	}
+	% alternative flows
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item 
+			انصراف
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد: ثبت مشکل فنی سیستم
+	}
+	
+	
+	
+	\cancelAlternativeFlow{ثبت مشکل فنی سیستم}{کاربر}{1}{گزارشی در سیستم ثبت نمی‌شود.}
+}
+
 \newpage
 \subsection{زیرسیستم گزارش‌گیری}
 
