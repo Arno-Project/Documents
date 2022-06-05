@@ -181,3 +181,126 @@
 	\end{tabular}
 	\caption{کارت کاتالوگ درخواست}
 \end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاربر}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر هر کسی که می‌تواند وارد سیستم شود.}
+		\crcattritem{نام}
+		\crcattritem{نام‌کاربری}
+		\crcattritem{کلمه‌ی عبور}
+		\crcattritem{شماره‌ی تماس}
+		\crcrespheader
+		\crcrespitem{نگهداری و ارائه‌ی اطلاعات مربوط به کاربر (شامل صفات بالا)}{}
+		\crcrespitem{احراز هویت کاربر}{}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت کاربر}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاربر عادی}
+		%parent
+		{کاربر}
+		%childs
+		{مشتری، متخصص}
+		%description
+		{نمایانگر کاربرانی که مدیر نیستند.}
+		\crcattritem{فعال بودن}
+		\crcrespheader
+		\crcrespitem{فعال و غیر فعال شدن}{}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت کاربر عادی}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مشتری}
+		%parent
+		{کاربر عادی}
+		%childs
+		{}
+		%description
+		{نمایانگر سفارش‌دهندگان خدمات.}
+		\crcattritem{امتیاز}
+		\crcrespheader
+		\crcrespitem{نگهداری، بروزرسانی و ارائه‌ی امتیاز}{بازخورد}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت مشتری}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{متخصص}
+		%parent
+		{کاربر عادی}
+		%childs
+		{}
+		%description
+		{نمایانگر ارائه‌دهندگان خدمات.}
+		\crcattritem{تخصص‌ها}
+		\crcattritem{امتیاز}
+		\crcrespheader
+		\crcrespitem{نگه‌داری، ویرایش و ارائه‌ی تخصص‌ها}{}
+		\crcrespitem{نگه‌داری، بروزرسانی و ارائه‌ی امتیاز}{بازخورد}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت متخصص}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مدیر شرکت}
+		%parent
+		{کاربر}
+		%childs
+		{}
+		%description
+		{نمایانگر کاربری که مسئولیت مدیریت سامانه را دارد.}
+		\crcrespheader
+		
+		\hline
+	\end{tabular}
+	\caption{کارت مدیر شرکت}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مدیر فنی}
+		%parent
+		{کاربر}
+		%childs
+		{}
+		%description
+		{نمایانگر کاربری که وظیفه‌ی رسیدگی به مشکلات فنی سیستم را دارد.}
+		\crcrespheader
+		
+		\hline
+	\end{tabular}
+	\caption{کارت مدیر فنی}
+\end{table}
+
+
