@@ -14,7 +14,7 @@
 		\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
 			
 			\hline
-			شناسه & نام وظیفه & مدت (روز) & شروع & پایان & پیش‌نیاز\\
+			شناسه & نام وظیفه & تخمین (نفر-روز) & شروع & پایان & پیش‌نیاز\\
 			\hline
 			\calendarEntry
 			{1.1}
@@ -182,7 +182,7 @@
 	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & مسئول\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
 		\hline
 		\calendarEntryWithName
 		{1.2}
@@ -311,14 +311,11 @@
 			bar height=0.6,
 			group right shift=0,
 			group top shift=.5,
-			group height=.2]{17}{26}
+			group height=.2]{20}{30}
 			
 			%labels
-			\gantttitle{خرداد}{10}
+			\gantttitle{خرداد}{11}
 			\\
-			\gantttitle{\rl{17}}{1} 
-			\gantttitle{\rl{18}}{1} 
-			\gantttitle{\rl{19}}{1} 
 			\gantttitle{\rl{20}}{1} 
 			\gantttitle{\rl{21}}{1} 
 			\gantttitle{\rl{22}}{1} 
@@ -326,37 +323,42 @@
 			\gantttitle{\rl{24}}{1} 
 			\gantttitle{\rl{25}}{1} 
 			\gantttitle{\rl{26}}{1} 
+			\gantttitle{\rl{27}}{1} 
+			\gantttitle{\rl{28}}{1} 
+			\gantttitle{\rl{29}}{1} 
+			\gantttitle{\rl{30}}{1} 
 			%
 			\\
 			%tasks
 			
-			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{17}{20} \\
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{20}{22} \\
 			
-			\ganttgroup{\rl{نیازمندی‌ها}}{17}{21} \\
-			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{17}{17} \\
-			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{18}{19} \\
-			\ganttbar[progress=0, name=interface, bar right shift=-0.5]{\rl{تهیه‌ی واسط کاربری قابل اجرا‌}}{19}{21} \\
-			\ganttbar[progress=0, name=interface2, bar left shift=0.5]{\rl{تهیه تصاویر از واسط کاربری قابل اجرا}}{21}{21} \\
+			\ganttgroup{\rl{نیازمندی‌ها}}{20}{27} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{20}{20} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی نیازمندی‌ها و موارد کاربرد با توجه به لیست جدید}}{20}{22} \\
+			\ganttbar[progress=0, name=interface, bar right shift=-0.5]{\rl{تهیه‌ی واسط کاربری قابل اجرا‌}}{20}{22} \\
+			\ganttbar[progress=0, name=interface2, bar right shift=-0.5]{\rl{‌نهایی کردن واسط کاربری قابل اجرا}}{25}{27} \\
+			\ganttbar[progress=0, name=interface3, bar left shift=0.5]{\rl{تهیه تصاویر از واسط کاربری قابل اجرا}}{27}{27} \\
+		
+			\ganttgroup[name=analyze]{\rl{تحلیل}}{23}{28} \\
+			\ganttbar[progress=0, name=update2]{\rl{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}}{23}{24} \\
+			\ganttbar[progress=0, name=pack]{\rl{بروزرسانی زیرسیستم‌ها و پیدا کردن بسته‌های سیستم‌}}{24}{24} \\						
+			\ganttbar[progress=0, name=class1]{\rl{بروزرسانی کلاس‌ها‌}}{24}{24} \\						
+			\ganttbar[progress=0, name=activity]{\rl{تهیه‌ی نمودارهای فعالیت با خطوط شنا}}{25}{26} \\
+			\ganttbar[progress=0, name=seq]{\rl{تهیه‌ی نمودارهای توالی‌}}{25}{26} \\
+			\ganttbar[progress=0, name=class2]{\rl{تهیه‌ی نمودار کلاس‌های تحلیل}}{27}{27} \\			
+			\ganttbar[progress=0, name=realization]{\rl{بروزرسانی تحقق موارد کاربرد‌}}{28}{28} \\
+			\ganttbar[progress=0, name=packDia]{\rl{تهیه‌ی نمودار بسته‌}}{28}{28} \\
 			
-			\ganttgroup[name=analyze]{\rl{تحلیل}}{20}{25} \\
-			\ganttbar[progress=0, name=update2]{\rl{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}}{20}{20} \\
-			\ganttbar[progress=0, name=pack]{\rl{بروزرسانی زیرسیستم‌ها و پیدا کردن بسته‌های سیستم‌}}{20}{20} \\						
-			\ganttbar[progress=0, name=class1]{\rl{بروزرسانی کلاس‌ها‌}}{20}{20} \\						
-			\ganttbar[progress=0, name=activity]{\rl{تهیه‌ی نمودارهای فعالیت با خطوط شنا}}{21}{22} \\
-			\ganttbar[progress=0, name=seq]{\rl{تهیه‌ی نمودارهای توالی‌}}{21}{22} \\
-			\ganttbar[progress=0, name=class2]{\rl{تهیه‌ی نمودار کلاس‌های تحلیل}}{23}{24} \\			
-			\ganttbar[progress=0, name=realization]{\rl{بروزرسانی تحقق موارد کاربرد‌}}{24}{25} \\
-			\ganttbar[progress=0, name=packDia]{\rl{تهیه‌ی نمودار بسته‌}}{24}{25} \\
 			
-			
-			
-			\ganttgroup{\rl{آزمون}}{25}{26} \\
-			\ganttbar[progress=0, name=test, bar left shift=0.5]{\rl{ارزیابی دستاوردها}}{25}{26} \\			
-			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{25}{26} \\
+			\ganttgroup{\rl{آزمون}}{29}{30} \\
+			\ganttbar[progress=0, name=test, bar right shift=-0.5]{\rl{ارزیابی دستاوردها}}{29}{30} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{29}{30} \\
 			
 			%relations 
 			
 			\ganttlink{interface}{interface2} 
+			\ganttlink{interface2}{interface3} 
 			\ganttlink[link mid=0.1]{check}{test} 
 			
 			\ganttlink[link mid=0.75]{pack}{activity} 
@@ -386,13 +388,13 @@
 	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & مسئول\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
 		\hline
 		\calendarEntryWithName
 		{1.3}
 		{استخراج چک‌لیست از اسلایدهای درس}
 		{1}
-		{صبا هاشمی}
+		{امیرمهدی نامجو}
 		\calendarEntryWithName
 		{2.3}
 		{بروزرسانی زمان‌بندی}
@@ -400,73 +402,78 @@
 		{صبا هاشمی}
 		\calendarEntryWithName
 		{3.3}
-		{بروزرسانی و اصلاح محصولات نیازمندی‌های تکرار قبل}
+		{بروزرسانی نیازمندی‌ها و موارد کاربرد با توجه به لیست جدید}
 		{1}
-		{امیرمهدی نامجو}
+		{صبا هاشمی}
 		\calendarEntryWithName
 		{4.3}
 		{تهیه‌ی واسط کاربر قابل اجرا}
 		{2}
 		{علیرضا تاج‌میرریاحی}
-		
 		\calendarEntryWithName
 		{5.3}
+		{نهایی کردن واسط کاربر قابل اجرا}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		
+		\calendarEntryWithName
+		{6.3}
 		{تهیه تصاویر از واسط کاربری قابل اجرا}
 		{0.5}
 		{علیرضا تاج‌میرریاحی}
 		
 		
 		\calendarEntryWithName
-		{6.3}
+		{7.3}
 		{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}
 		{1}
 		{مصطفی اوجاقی}
 		\calendarEntryWithName
-		{7.3}
+		{8.3}
 		{بروزرسانی زیرسیستم‌ها و پیدا کردن بسته‌های سیستم}
 		{0.5}
 		{مصطفی اوجاقی}
 		\calendarEntryWithName
-		{8.3}
+		{9.3}
 		{بروزرسانی کلاس‌ها}
 		{0.5}
 		{مصطفی اوجاقی}
 		\calendarEntryWithName
-		{9.3}
+		{10.3}
 		{تهیه‌ی نمودارهای فعالیت با خطوط شنا}
 		{3}
 		{صبا هاشمی}
 		
 		\calendarEntryWithName
-		{10.3}
+		{11.3}
 		{تهیه نمودارهای توالی}
 		{3}
 		{امیرمهدی نامجو}
 		\calendarEntryWithName
-		{11.3}
+		{12.3}
 		{تهیه‌ی نمودار کلاس‌های تحلیل}
 		{2}
 		{مصطفی اوجاقی}
 		
 		\calendarEntryWithName
-		{12.3}
+		{13.3}
 		{بروزرسانی تحقق موارد کاربرد}
 		{2}
 		{علیرضا تاج‌میرریاحی}
 		
 		\calendarEntryWithName
-		{13.3}
+		{14.3}
 		{تهیه نمودار بسته}
 		{2}
 		{امیرمهدی نامجو}
 		
 		\calendarEntryWithName
-		{14.3}
+		{15.3}
 		{ارزیابی دستاوردها}
 		{1}
 		{صبا هاشمی}
 		\calendarEntryWithName
-		{15.3}
+		{16.3}
 		{تکمیل مستندات}
 		{1}
 		{علیرضا تاج‌میرریاحی}
@@ -475,6 +482,7 @@
 	\end{tabular}
 	\caption{زمان‌بندی تحلیل تفصیلی - تکرار دوم}
 \end{table}
+\FloatBarrier
 \newpage
 
 
@@ -551,13 +559,15 @@
 	\end{center}
 	\caption{گانت چارت زمان‌بندی تحلیل تفصیلی - تکرار سوم}
 \end{figure}
+
+\FloatBarrier
 \newpage
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & مسئول\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
 		\hline
 		\calendarEntryWithName
 		{1.4}
@@ -623,7 +633,7 @@
 	\end{tabular}
 	\caption{زمان‌بندی تحلیل تفصیلی - تکرار سوم}
 \end{table}
-
+\FloatBarrier
 \newpage
 \section{ساخت - تکرار اول}
 
@@ -694,13 +704,15 @@
 	\end{center}
 	\caption{گانت چارت زمان‌بندی ساخت - تکرار اول}
 \end{figure}
+
+\FloatBarrier
 \newpage
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & مسئول\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
 		\hline
 		\calendarEntryWithName
 		{1.5}
@@ -771,7 +783,7 @@
 	\end{tabular}
 	\caption{زمان‌بندی ساخت - تکرار اول}
 \end{table}
-
+\FloatBarrier
 \newpage
 
 \section{ساخت - تکرار دوم}
@@ -857,13 +869,15 @@
 	\end{center}
 	\caption{گانت چارت زمان‌بندی ساخت - تکرار دوم}
 \end{figure}
+\FloatBarrier
 \newpage
+
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & مسئول\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
 		\hline
 		\calendarEntryWithName
 		{1.6}
@@ -939,7 +953,7 @@
 	\caption{زمان‌بندی ساخت - تکرار دوم}
 \end{table}
 
-
+\FloatBarrier
 \newpage
 
 \section{گذار - تکرار اول}
@@ -949,7 +963,7 @@
 	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|} 
 		
 		\hline
-		شناسه & نام وظیفه & مدت (روز) & شروع & پایان\\
+		شناسه & نام وظیفه & تخمین (نفر-روز) & شروع & پایان\\
 		\hline
 		\calendarEntryWithoutDep
 		{49}
