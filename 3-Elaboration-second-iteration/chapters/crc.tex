@@ -158,7 +158,6 @@
 		\crcrespheader
 		\crcrespitem{ثبت مقدار کمی امتیاز برای معیار ارزیابی}{معیار ارزیابی}
 		\crcrespitem{ثبت توضیحات برای معیار ارزیابی}{معیار ارزیابی}
-		\crcrespitem{ثبت درخواست مربوطه}{درخواست }
 		\crcrespitem{نگه‌داری و ارائه اطلاعات مربوط به بازخورد (شامل صفاتی که در بالا ذکر شده)}{معیار ارزیابی، درخواست}
 		\hline
 	\end{tabular}
@@ -272,12 +271,31 @@
 		\crcrespitem{نگهداری و ارائه‌ی اطلاعات مربوط به کاربر (شامل صفات بالا)}{}
 		\crcrespitem{احراز هویت کاربر}{}
 		\crcrespitem{خروج کاربر}{}		
-				\crcrespitem{ثبت‌ کاربر جدید}{}		
-		\crcrespitem{ارائه لیست کاربران}{}		
-		\crcrespitem{جست‌وجو در لیست کاربران}{}		
 		\hline
 	\end{tabular}
 	\caption{کارت کاربر}
+\end{table}
+
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ کاربر}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست کاربران.}
+		\crcrespheader
+		\crcrespitem{ثبت‌ کاربر جدید}{کاربر}		
+		\crcrespitem{ارائه لیست کاربران}{کاربر}		
+		\crcrespitem{جست‌وجو در لیست کاربران}{کاربر}		
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ کاربر}
 \end{table}
 
 
@@ -292,8 +310,9 @@
 		%description
 		{نمایانگر کاربرانی که مدیر نیستند.}
 		\crcrespheader
-				\crcrespitem{}{}
+		\crcrespitem{}{}
 		\hline
+		\crcrespitem{ثبت نام}{کاربر}		
 	\end{tabular}
 	\caption{کارت کاربر عادی}
 \end{table}
@@ -389,7 +408,7 @@
 		%childs
 		{}
 		%description
-		{نمایانگر کاربری که وظیفه‌ی رسیدگی به مشکلات فنی سیستم را دارد.}
+		{نمایانگر متنی که بین دو کاربر رد و بدل می‌شود.}
 				\crcattritem{کاربر فرستنده}
 		\crcattritem{کاربر گیرنده}
 		\crcattritem{درخواست}
