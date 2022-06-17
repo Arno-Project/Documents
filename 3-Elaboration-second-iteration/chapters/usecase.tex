@@ -118,7 +118,7 @@
 {\begin{itemize}
 		\vspace*{-0.6cm}
 		\item انصراف: 
-		\item معتبر نبودن ایمیل در مرحله ۲.۱.: .
+		\item معتبر نبودن ایمیل در مرحله ۲.۱.
 		
 		
 \end{itemize}}
@@ -1238,10 +1238,16 @@
 		شامل (Include) مورد کاربری «فیلتر و مرتب‌سازی درخواست‌ها»
 		\item
 		متخصص یک درخواست را انتخاب می‌کند تا جزییات آن نمایش داده شود.
+		\item 
+		\textbf{اگر} تعداد کل درخواست‌های متخصص در ماه کمتر از حد مجاز براساس امتیاز وی بود:
+		\begin{enumerate}[label=\theenumi.\arabic*.]
+			\item 
+		
 		\item
 		پس از مشاهده‌ی جزییات، متخصص برای انجام این درخواست اعلام آمادگی می‌کند.
 		\item
 		سیستم اعلام آمادگی متخصص را به مشتری اطلاع می‌دهد و موفقیت آمیز بودن آن را به متخصص اعلام می‌کند.
+		\end{enumerate}
 	\end{enumerate}
 }
 % postconditions
@@ -1296,6 +1302,7 @@
 		روند جایگزین در مرحله‌ی مشاهده‌ی جزییات سفارش می‌تواند آغاز شود.
 		\item
 		متخصص دلیل رد درخواست را وارد می‌کند.
+		
 		\item
 		متخصص رد درخواست را تایید می‌کند.
 		\item
@@ -1668,151 +1675,7 @@
 
 
 
-% 
 
-
-
-
-{
-\usecase
-% name
-{دریافت تخصص‌ها}
-% id
-{14}
-% brief description
-{لیست تخصص‌های ثبت شده در سیستم نمایش داده می‌شود.}
-% primary actors
-{متخصص، مدیر شرکت}
-% secondary actors
-{}
-% preconditons
-{متخصص/مدیر شرکت در سیستم لاگین کرده باشد.}
-% main flow
-{
-	\vspace*{-0.6cm}
-	\begin{enumerate}
-		\item مورد کاربرد با درخواست لیست تخصص‌های موجود در سیستم آغاز می‌شود.
-		\item لیستی از تمام تخصص‌ها به کاربر بازگردانده می‌شود.
-	\end{enumerate}
-}
-% postconditions
-{لیست تخصص‌های موجوذ در سیستم به کاربر نمایش داده می‌شود.}
-% ve flows
-{
-}
-% table name
-{
-	مورد کاربرد: دریافت تخصص‌ها
-}
-}
-
-% اضافه کردن تخصص‌های جدید
-{
-\usecase
-% name
-{اضافه کردن تخصص‌های جدید}
-% id
-{16}
-% brief description
-{}
-% primary actors
-{مدیر شرکت}
-% secondary actors
-{}
-% preconditons
-{مدیر شرکت به سیستم لاگین کرده باشد.}
-% main flow
-{
-	\vspace*{-0.6cm}
-	\begin{enumerate}
-		\item 
-		مورد کاربرد با انتخاب «افزودن نوع خدمت جدید» توسط مدیر شرکت آغاز می‌شود.
-		\item Include (دریافت تخصص‌ها)
-		\item مدیر شرکت نوع خدمت مدنظر خود را وارد می‌کند. 
-		\item
-		\textbf{اگر}
-		مورد جدید در لیست تخصص‌ها موجود باشد:
-		\begin{enumerate}[label=\theenumi.\arabic*.]
-			\item پیغام خطا به مدیر شرکت نمایش داده می‌شود.
-		\end{enumerate}
-		\item
-		\textbf{در غیر این صورت}:
-		\begin{enumerate}[label=\theenumi.\arabic*.]
-			\item نوع خدمت جدید در سیستم ثبت می‌شود.
-		\end{enumerate}		
-	\end{enumerate}
-}
-% postconditions
-{یک نوع خدمت جدید - در صورت از قبل موجود نبودن - در سیستم ثبت می‌شود.}
-% alternative flows
-{
-	\begin{itemize}
-		\vspace*{-0.6cm}
-		\item انصراف
-	\end{itemize}
-}
-% table name
-{
-	مورد کاربرد: اضافه کردن تخصص‌های جدید 
-}
-
-\cancelAlternativeFlow{اضافه کردن تخصص‌های جدید}{مدیر شرکت}{1}{}
-}
-
-% تعریف زیرحوزه برای تخصص
-
-{
-\usecase
-% name
-{تعریف زیرحوزه برای تخصص}
-% id
-{17}
-% brief description
-{جهت سهولت تعیین خدمت توسط مشتری و متخصص، برای یکی از تخصص‌های حاضر در سیستم، یک زیرحوزه جدید ثبت می‌شود.}
-% primary actors
-{مدیر شرکت}
-% secondary actors
-{}
-% preconditons
-{مدیر شرکت به سیستم لاگین کرده باشد.}
-% main flow
-{
-	\vspace*{-0.6cm}
-	\begin{enumerate}
-		\item 
-		مورد کاربرد با انتخاب «افزودن زیرحوزه برای تخصص» توسط مدیر شرکت آغاز می‌شود.
-		\item Include (دریافت تخصص‌ها)
-		\item زیرحوزه‌های موجود برای تخصص مورد نظر نمایش داده می‌شود.
-		\item مدیر شرکت زیرحوزه‌ی مدنظر خود را وارد می‌کند. 
-		\item
-		\textbf{اگر}
-		مورد جدید در لیست زیرحوزه‌ها موجود باشد:
-		\begin{enumerate}[label=\theenumi.\arabic*.]
-			\item پیغام خطا به مدیر شرکت نمایش داده می‌شود.
-		\end{enumerate}
-		\item
-		\textbf{در غیر این صورت}:
-		\begin{enumerate}[label=\theenumi.\arabic*.]
-			\item زیرحوزه‌ی جدید آن تخصص در سیستم ثبت می‌شود.
-		\end{enumerate}		
-	\end{enumerate}
-}
-% postconditions
-{یک زیرحوزه‌ی جدید برای یک تخصص موجود - در صورت از قبل موجود نبودن - در سیستم ثبت می‌شود.}
-% alternative flows
-{
-	\begin{itemize}
-		\vspace*{-0.6cm}
-		\item انصراف
-	\end{itemize}
-}
-% table name
-{
-	مورد کاربرد: تعریف زیرحوزه برای تخصص
-}
-
-\cancelAlternativeFlow{تعریف زیرحوزه برای تخصص}{مدیر شرکت}{1}{}
-}
 
 %  ثبت زمان انجام شدن خدمت
 
@@ -2953,3 +2816,305 @@
 
 	\cancelAlternativeFlow{پاسخ گزارش مشکلات فنی سیستم }{مدیر فنی}{1}{پاسخ در سیستم ثبت نمی‌شود.}
 }
+
+\newpage
+\subsection{زیرسیستم مدیریت}
+
+% اضافه کردن تخصص‌های جدید
+{
+	\usecase
+	% name
+	{اضافه کردن تخصص‌های جدید}
+	% id
+	{16}
+	% brief description
+	{}
+	% primary actors
+	{مدیر شرکت}
+	% secondary actors
+	{}
+	% preconditons
+	{مدیر شرکت به سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			مورد کاربرد با انتخاب «افزودن نوع خدمت جدید» توسط مدیر شرکت آغاز می‌شود.
+			\item Include (دریافت تخصص‌ها)
+			\item مدیر شرکت نوع خدمت مدنظر خود را وارد می‌کند. 
+			\item
+			\textbf{اگر}
+			مورد جدید در لیست تخصص‌ها موجود باشد:
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item پیغام خطا به مدیر شرکت نمایش داده می‌شود.
+			\end{enumerate}
+			\item
+			\textbf{در غیر این صورت}:
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item نوع خدمت جدید در سیستم ثبت می‌شود.
+			\end{enumerate}		
+		\end{enumerate}
+	}
+	% postconditions
+	{یک نوع خدمت جدید - در صورت از قبل موجود نبودن - در سیستم ثبت می‌شود.}
+	% alternative flows
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item انصراف
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد: اضافه کردن تخصص‌های جدید 
+	}
+	
+	\cancelAlternativeFlow{اضافه کردن تخصص‌های جدید}{مدیر شرکت}{1}{}
+}
+
+% تعریف زیرحوزه برای تخصص
+
+{
+	\usecase
+	% name
+	{تعریف زیرحوزه برای تخصص}
+	% id
+	{17}
+	% brief description
+	{جهت سهولت تعیین خدمت توسط مشتری و متخصص، برای یکی از تخصص‌های حاضر در سیستم، یک زیرحوزه جدید ثبت می‌شود.}
+	% primary actors
+	{مدیر شرکت}
+	% secondary actors
+	{}
+	% preconditons
+	{مدیر شرکت به سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			مورد کاربرد با انتخاب «افزودن زیرحوزه برای تخصص» توسط مدیر شرکت آغاز می‌شود.
+			\item Include (دریافت تخصص‌ها)
+			\item زیرحوزه‌های موجود برای تخصص مورد نظر نمایش داده می‌شود.
+			\item مدیر شرکت زیرحوزه‌ی مدنظر خود را وارد می‌کند. 
+			\item
+			\textbf{اگر}
+			مورد جدید در لیست زیرحوزه‌ها موجود باشد:
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item پیغام خطا به مدیر شرکت نمایش داده می‌شود.
+			\end{enumerate}
+			\item
+			\textbf{در غیر این صورت}:
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item زیرحوزه‌ی جدید آن تخصص در سیستم ثبت می‌شود.
+			\end{enumerate}		
+		\end{enumerate}
+	}
+	% postconditions
+	{یک زیرحوزه‌ی جدید برای یک تخصص موجود - در صورت از قبل موجود نبودن - در سیستم ثبت می‌شود.}
+	% alternative flows
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item انصراف
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد: تعریف زیرحوزه برای تخصص
+	}
+	
+	\cancelAlternativeFlow{تعریف زیرحوزه برای تخصص}{مدیر شرکت}{1}{}
+}
+
+
+
+% دریافت تخصص ها
+
+
+
+
+{
+	\usecase
+	% name
+	{دریافت تخصص‌ها}
+	% id
+	{14}
+	% brief description
+	{لیست تخصص‌های ثبت شده در سیستم نمایش داده می‌شود.}
+	% primary actors
+	{متخصص، مدیر شرکت}
+	% secondary actors
+	{}
+	% preconditons
+	{متخصص/مدیر شرکت در سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item مورد کاربرد با درخواست لیست تخصص‌های موجود در سیستم آغاز می‌شود.
+			\item لیستی از تمام تخصص‌ها به کاربر بازگردانده می‌شود.
+		\end{enumerate}
+	}
+	% postconditions
+	{لیست تخصص‌های موجوذ در سیستم به کاربر نمایش داده می‌شود.}
+	% ve flows
+	{
+	}
+	% table name
+	{
+		مورد کاربرد: دریافت تخصص‌ها
+	}
+}
+
+
+% تعیین امتیاز مورد نیاز برای پذیرش درخواست
+
+{
+	\usecase
+	% name
+	{تعیین امتیاز مورد نیاز برای پذیرش درخواست}
+	% id
+	{14}
+	% brief description
+	{مدیر شرکت باید بتواند تعیین کند که متخصص با چه سطح امتیازی، می‌تواند چه تعداد خدمت در ماه دریافت کند}
+	% primary actors
+	{مدیر شرکت}
+	% secondary actors
+	{}
+	% preconditons
+	{مدیر شرکت در سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item مدیر شرکت درخواست ثبت سطح امتیاز مورد نیاز برای پذیرش درخواست را می‌دهد.
+			\item بازه‌های امتیازی ممکن با دقت $0.5$ برای مدیر شرکت نمایش داده می‌شود.
+			
+			\item به ازای هر بازه امتیازی
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item مدیر مشخص می‌کند که متخصص با آن بازه امتیازی چه تعداد درخواست در ماه می‌تواند دریافت کند.
+			\end{enumerate}
+			\item 
+			مدیر حدود تعیین شده را ثبت می‌کند.
+			\item 
+			مقادیر وارد شده توسط مدیر برای سطوح امتیازی و تعداد درخواست‌های نظیر آن‌ها در سیستم ثبت می‌شود.
+		\end{enumerate}
+	}
+	% postconditions
+	{حدود مشخص شده برای امتیازها و تعداد‌ درخواست‌های نظیر آن‌ها در سیستم ثبت می‌شود.}
+	% ve flows
+	{
+		\begin{itemize}
+			\item
+			انصراف
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد: تعیین امتیاز مورد نیاز برای پذیرش درخواست
+	}
+}
+
+	\cancelAlternativeFlow{تعیین امتیاز مورد نیاز برای پذیرش درخواست}{مدیر شرکت}{1}{}
+	
+	
+
+
+{
+	\usecase
+	% name
+	{ویرایش همه اطلاعات}
+	% id
+	{14}
+	% brief description
+	{مدیر فنی شرکت باید بتواند هر اطلاعاتی را ویرایش کند.}
+	% primary actors
+	{مدیر فنی}
+	% secondary actors
+	{}
+	% preconditons
+	{مدیر فنی در سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item مدیر فنی درخواست ویرایش کلی اطلاعات را می‌دهد
+			\item لیستی از تمامی موجودیت‌های سیستم و اطلاعات قابل ویرایش نمایش داده می‌شود.
+			
+			\item مدیر فنی موردی که قصد ویرایش آن را دارد انتخاب می‌کند
+			
+			\item تا زمانی که اطلاعات جدید مورد صحت سیستم نیستند:
+			\begin{enumerate}[label=\theenumi.\arabic*.]
+				\item مدیر فنی اطلاعات مورد نظر خود را ویرایش می‌کند.
+			\end{enumerate}
+			\item 
+			مدیر فنی ویرایش اطلاعات را تایید می‌کند.
+			
+		\end{enumerate}
+	}
+	% postconditions
+	{اطلاعات ویرایش شده در سیستم ثبت می‌شود.}
+	% ve flows
+	{
+		\begin{itemize}
+			\item
+			انصراف
+			\item 
+			معتبر نبودن اطلاعات جدید
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد:ویرایش همه اطلاعات
+	}
+}
+
+	\cancelAlternativeFlow{ویرایش همه اطلاعات}{مدیر فنی}{1}{}
+	
+	
+	\alternativeflow
+	% name
+	{
+		ویرایش همه اطلاعات:معتبر نبودن اطلاعات جدید
+	}
+	% id
+	{1.2}
+	% brief description
+	{
+		بخشی از اطلاعات ثبت شده برای ویرایش اطلاعات صحیح نیست.
+	}
+	% primary actos
+	{
+		مدیر فنی
+	}
+	% secondary actors
+	{}
+	% preconditons
+	{
+		\begin{itemize}
+			\vspace*{-0.6cm}
+			\item 
+			اطلاعات ثبت شده توسط مدیر فنی برای ویرایش صحیح نباشد.
+		
+		\end{itemize}
+	}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			روند جایگزین می‌تواند در مرحله ۴ آغاز شود.
+			\item
+			سیستم به مدیر فنی معتبر نبودن اطلاعات را اطلاع می‌دهد.
+		\end{enumerate}
+	}
+	% postconditions
+	{
+		مدیر فنی از معتبر نبودن اطلاعات وارد شده توسط خودش مطلع می‌شود.
+	}
+	% table name
+	{
+		روند جایگزین: ویرایش همه اطلاعات: معتبر نبودن اطلاعات جدید
+	}
