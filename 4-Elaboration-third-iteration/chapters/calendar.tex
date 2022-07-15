@@ -1,0 +1,980 @@
+
+\chapter{برنامه زمانی فازها}
+
+
+برنامه‌ی زمانی مربوط به فاز فعلی و فازهای آینده‌ی پروژه به‌روز شده است. برای هر فاز بازه‌ی زمانی انجام تسک‌ها و همچنین وابستگی‌های اساسی آن‌ها در یک گانت چارت و مدت زمان تخمینی برای انجام هر تسک و یک نفر به عنوان مسئول در جدول زمان‌بندی آن فاز مشخص شده است. فرد مسئول لزوما همه‌ی کارهای تسک را به تنهایی انجام نمی‌دهد و بقیه‌ی افراد نیز مشارکت خواهند داشت ولی وی وظیفه‌ی پیگیری انجام آن تسک را برعهده دارد.
+
+\newpage
+\section{تحلیل مقدماتی - تکرار اول}
+
+\FloatBarrier
+\begin{singlespace}
+	\begin{table}[ht!]
+		\centering
+		\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.07\linewidth}|} 
+			
+			\hline
+			شناسه & نام وظیفه & تخمین (نفر-روز) & شروع & پایان & پیش‌نیاز\\
+			\hline
+			\calendarEntry
+			{1.1}
+			{تخمین زمانی برای پروژه}
+			{1}
+			{2/30}
+			{2/30}
+			{}
+			\calendarEntry
+			{2.1}
+			{تهیه قالب مستندات}
+			{0.5}
+			{2/31}
+			{2/31}
+			{}
+			
+			\calendarEntry
+			{3.1}
+			{تهیه لیست ریسک‌ها}
+			{0.5}
+			{2/31}
+			{2/31}
+			{1}
+			
+			\calendarEntry
+			{4.1}
+			{تهیه لیست نیازمندی‌ها}
+			{0.5}
+			{3/1}
+			{3/1}
+			{1}
+			
+			\calendarEntry
+			{5.1}
+			{اولویت بندی نیازمندی‌ها و ریسک‌ها}
+			{0.5}
+			{3/1}
+			{3/1}
+			{3,4}
+			
+			
+			\calendarEntry
+			{6.1}
+			{رسم نمودار موارد کاربرد}
+			{0.5}
+			{3/2}
+			{3/2}
+			{5}
+			
+			\calendarEntry
+			{7.1}
+			{جزییات موارد کاربرد}
+			{2}
+			{3/2}
+			{3/4}
+			{6}
+			
+			\calendarEntry
+			{8.1}
+			{تکمیل واژه‌نامه و موارد باقی‌مانده مستندات}
+			{0.5}
+			{3/4}
+			{3/4}
+			{7}
+			
+			
+		\end{tabular}
+		\caption{زمان‌بندی تحلیل مقدماتی - تکرار اول}
+	\end{table}
+\end{singlespace}
+\FloatBarrier
+\newpage
+\section{تحلیل تفصیلی - تکرار اول}
+\FloatBarrier
+\begin{figure}[ht!]
+	
+	\begin{center}
+		\begin{ganttchart}[
+			expand chart=1\textwidth,
+			vrule label font=\tiny,
+			title label font=\tiny, 
+			bar label font=\tiny, 
+			y unit title=1cm,
+			y unit chart=0.8cm,
+			x unit=1cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=0,
+			title right shift=0,
+			title height=1,
+			progress label text={},
+			bar height=0.6,
+			group right shift=0,
+			group top shift=.5,
+			group height=.2]{8}{15}
+			
+			%labels
+			\gantttitle{خرداد}{8}
+			\\
+			\gantttitle{\rl{۸}}{1} 
+			\gantttitle{\rl{۹}}{1} 
+			\gantttitle{\rl{۱۰}}{1} 
+			\gantttitle{\rl{۱۱}}{1} 
+			\gantttitle{\rl{۱۲}}{1} 
+			\gantttitle{\rl{۱۳}}{1} 
+			\gantttitle{\rl{۱۴}}{1} 
+			\gantttitle{\rl{۱۵}}{1} 
+			%
+			\\
+			%tasks
+			
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{8}{10} \\
+			
+			\ganttgroup{\rl{نیازمندی‌ها}}{8}{13} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{8}{9} \\
+			\ganttgroup[name=update]{\rl{بروزرسانی محصولات}}{10}{13} \\
+			\ganttbar[progress=0]{\rl{بروزرسانی نیازمندی‌ها}}{10}{12} \\
+			\ganttbar[progress=0, name=risk]{\rl{بروزرسانی ریسک‌ها}}{10}{11} \\
+			\ganttbar[progress=0, name=risk3]{\rl{ریسک‌های تکنیکی}}{11}{12} \\
+			\ganttbar[progress=0, name=risk2]{\rl{اولویت‌بندی ریسک‌ها}}{12}{13} \\
+			\ganttbar[progress=0]{\rl{بروزرسانی مواردکاربرد}}{10}{12} \\
+			\ganttbar[progress=0, name=archReq]{\rl{نیازمندی‌های پراهمیت معماری}}{12}{12} \\
+			\ganttbar[progress=0]{\rl{اضافه کردن نیازمندی‌های جدید}}{12}{13} \\
+			
+			\ganttbar[progress=0]{\rl{تکمیل موارد کاربرد}}{12}{13} \\
+			
+			\ganttgroup{\rl{تحلیل}}{12}{14} \\
+			\ganttbar[progress=0, name=brain, bar right shift=-0.5]{\rl{\lr{brain storm} برای پیدا کردن کلاس‌ها}}{12}{12} \\
+			\ganttbar[progress=0, name=crc, bar left shift=0.5]{\rl{کارت‌های CRC}}{12}{14} \\
+			\ganttbar[progress=0, name=activity]{\rl{نمودارهای فعالیت}}{13}{14} \\			
+			\ganttbar[progress=0, name=realization]{\rl{بررسی تحقق موارد کاربرد‌}}{14}{14} \\
+			
+			\ganttgroup[name=impl]{\rl{پیاده‌سازی}}{13}{15} \\
+			\ganttbar[progress=0, name=back]{\rl{پیاده‌سازی بکند نمونه‌ اولیه سیستم }}{13}{14} \\
+			\ganttbar[progress=0, name=front, bar left shift=0.5]{\rl{پیاده‌سازی فرانت‌اند نمونه اولیه‌ سیستم}}{14}{15} \\
+			
+			
+			\ganttgroup{\rl{آزمون}}{15}{15} \\
+			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{15}{15} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{13}{15} \\
+			
+			%relations 
+			\ganttlink[link bulge=1.4, link mid=0.25]{risk}{risk2} 
+			\ganttlink{risk3}{risk2} 
+			\ganttlink[link mid=0.1]{check}{test} 
+			\ganttlink{brain}{crc} 
+			\ganttlink{crc}{activity}
+			\ganttlink[link type=dr]{back}{front} 
+			\ganttlink[link mid=0.4, link bulge=1.3]{archReq}{impl}
+			\ganttlink{sched}{update}
+			\ganttlink[link  bulge=0.2]{activity}{realization}
+			\ganttlink[link mid = 0.9]{crc}{impl}
+			
+			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{گانت چارت زمان‌بندی تحلیل تفصیلی - تکرار اول}
+	\vspace*{-2cm}
+\end{figure}
+\FloatBarrier
+\newpage
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
+		\hline
+		\calendarEntryWithName
+		{1.2}
+		{استخراج چک‌لیست از اسلایدهای درس}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{2.2}
+		{بروزرسانی زمان‌بندی}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{3.2}
+		{بروزرسانی نیازمندی‌ها با توجه به بازخوردها}
+		{0.5}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{4.2}
+		{بروزرسانی ریسک‌ها با توجه به بازخوردها}
+		{0.5}
+		{مصطفی اوجاقی}
+		
+		\calendarEntryWithName
+		{5.2}
+		{استخراج ریسک‌های تکنینکی}
+		{0.5}
+		{امیرمهدی نامجو}
+		
+		
+		\calendarEntryWithName
+		{6.2}
+		{اولویت‌بندی ریسک‌ها}
+		{1}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{7.2}
+		{بروزرسانی موارد کاربرد}
+		{1}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{8.2}
+		{استخراج نیازمندی‌های پراهمیت معماری}
+		{1}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{9.2}
+		{اضافه کردن نیازمندی‌های جدید}
+		{1}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{10.2}
+		{تکمیل موارد کاربرد}
+		{1}
+		{مصطفی اوجاقی}
+		
+		\calendarEntryWithName
+		{11.2}
+		{\lr{brain storm} برای پیدا کردن کلاس‌ها
+		}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{12.2}
+		{کارت‌های CRC}
+		{2}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{13.2}
+		{نمودارهای فعالیت}
+		{2}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{14.2}
+		{بررسی تحقق موارد کاربرد}
+		{0.5}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{15.2}
+		{پیاده‌سازی بکند نمونه اولیه‌ی سیستم}
+		{2}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{16.2}
+		{پیاده‌سازی فرانت‌اند نمونه اولیه‌ی سیستم}
+		{1.5}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{17.2}
+		{ارزیابی دستاوردها}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{18.2}
+		{تکمیل مستندات}
+		{1}
+		{مصطفی اوجاقی}
+		
+		
+	\end{tabular}
+	\caption{زمان‌بندی تحلیل تفصیلی - تکرار اول}
+\end{table}
+
+\newpage
+
+\section{تحلیل تفصیلی - تکرار دوم}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\begin{ganttchart}[
+			expand chart=1\textwidth,
+			vrule label font=\tiny,
+			title label font=\tiny, 
+			bar label font=\tiny, 
+			y unit title=1cm,
+			y unit chart=0.8cm,
+			x unit=1cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=0,
+			title right shift=0,
+			title height=1,
+			progress label text={},
+			bar height=0.6,
+			group right shift=0,
+			group top shift=.5,
+			group height=.2]{20}{30}
+			
+			%labels
+			\gantttitle{خرداد}{11}
+			\\
+			\gantttitle{\rl{20}}{1} 
+			\gantttitle{\rl{21}}{1} 
+			\gantttitle{\rl{22}}{1} 
+			\gantttitle{\rl{23}}{1} 
+			\gantttitle{\rl{24}}{1} 
+			\gantttitle{\rl{25}}{1} 
+			\gantttitle{\rl{26}}{1} 
+			\gantttitle{\rl{27}}{1} 
+			\gantttitle{\rl{28}}{1} 
+			\gantttitle{\rl{29}}{1} 
+			\gantttitle{\rl{30}}{1} 
+			%
+			\\
+			%tasks
+			
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{20}{22} \\
+			
+			\ganttgroup{\rl{نیازمندی‌ها}}{20}{27} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{20}{20} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی نیازمندی‌ها و موارد کاربرد با توجه به لیست جدید}}{20}{22} \\
+			\ganttbar[progress=0, name=interface, bar right shift=-0.5]{\rl{تهیه‌ی واسط کاربری قابل اجرا‌}}{20}{22} \\
+			\ganttbar[progress=0, name=interface2, bar right shift=-0.5]{\rl{‌نهایی کردن واسط کاربری قابل اجرا}}{25}{27} \\
+			\ganttbar[progress=0, name=interface3, bar left shift=0.5]{\rl{تهیه تصاویر از واسط کاربری قابل اجرا}}{27}{27} \\
+		
+			\ganttgroup[name=analyze]{\rl{تحلیل}}{23}{28} \\
+			\ganttbar[progress=0, name=update2]{\rl{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}}{23}{24} \\
+			\ganttbar[progress=0, name=pack]{\rl{بروزرسانی زیرسیستم‌ها و پیدا کردن بسته‌های سیستم‌}}{24}{24} \\						
+			\ganttbar[progress=0, name=class1]{\rl{بروزرسانی کلاس‌ها‌}}{24}{24} \\						
+			\ganttbar[progress=0, name=activity]{\rl{تهیه‌ی نمودارهای فعالیت با خطوط شنا}}{25}{26} \\
+			\ganttbar[progress=0, name=seq]{\rl{تهیه‌ی نمودارهای توالی‌}}{25}{26} \\
+			\ganttbar[progress=0, name=class2]{\rl{تهیه‌ی نمودار کلاس‌های تحلیل}}{27}{27} \\			
+			\ganttbar[progress=0, name=realization]{\rl{بروزرسانی تحقق موارد کاربرد‌}}{28}{28} \\
+			\ganttbar[progress=0, name=packDia]{\rl{تهیه‌ی نمودار بسته‌}}{28}{28} \\
+			
+			
+			\ganttgroup{\rl{آزمون}}{29}{30} \\
+			\ganttbar[progress=0, name=test, bar right shift=-0.5]{\rl{ارزیابی دستاوردها}}{29}{30} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{29}{30} \\
+			
+			%relations 
+			
+			\ganttlink{interface}{interface2} 
+			\ganttlink{interface2}{interface3} 
+			\ganttlink[link mid=0.1]{check}{test} 
+			
+			\ganttlink[link mid=0.75]{pack}{activity} 
+			\ganttlink{class1}{activity} 						
+			
+			\ganttlink[link mid=0.5]{pack}{seq} 
+			\ganttlink[link mid=0.25]{class1}{seq} 
+			
+			\ganttlink[link mid=0.75]{activity}{class2} 	
+			\ganttlink{seq}{class2} 	
+			
+			\ganttlink[link mid=0.5]{class2}{realization} 				
+			
+			\ganttlink[link mid=0.25]{class2}{packDia} 						
+			
+			\ganttlink{update}{analyze}
+			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{گانت چارت زمان‌بندی تحلیل تفصیلی - تکرار دوم}
+\end{figure}
+
+\newpage
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
+		\hline
+		\calendarEntryWithName
+		{1.3}
+		{استخراج چک‌لیست از اسلایدهای درس}
+		{1}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{2.3}
+		{بروزرسانی زمان‌بندی}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{3.3}
+		{بروزرسانی نیازمندی‌ها و موارد کاربرد با توجه به لیست جدید}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{4.3}
+		{تهیه‌ی واسط کاربر قابل اجرا}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{5.3}
+		{نهایی کردن واسط کاربر قابل اجرا}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		
+		\calendarEntryWithName
+		{6.3}
+		{تهیه تصاویر از واسط کاربری قابل اجرا}
+		{0.5}
+		{علیرضا تاج‌میرریاحی}
+		
+		
+		\calendarEntryWithName
+		{7.3}
+		{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}
+		{1}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{8.3}
+		{بروزرسانی زیرسیستم‌ها و پیدا کردن بسته‌های سیستم}
+		{0.5}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{9.3}
+		{بروزرسانی کلاس‌ها}
+		{0.5}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{10.3}
+		{تهیه‌ی نمودارهای فعالیت با خطوط شنا}
+		{3}
+		{صبا هاشمی}
+		
+		\calendarEntryWithName
+		{11.3}
+		{تهیه نمودارهای توالی}
+		{3}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{12.3}
+		{تهیه‌ی نمودار کلاس‌های تحلیل}
+		{2}
+		{مصطفی اوجاقی}
+		
+		\calendarEntryWithName
+		{13.3}
+		{بروزرسانی تحقق موارد کاربرد}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		
+		\calendarEntryWithName
+		{14.3}
+		{تهیه نمودار بسته}
+		{2}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{15.3}
+		{ارزیابی دستاوردها}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{16.3}
+		{تکمیل مستندات}
+		{1}
+		{علیرضا تاج‌میرریاحی}
+		
+		
+	\end{tabular}
+	\caption{زمان‌بندی تحلیل تفصیلی - تکرار دوم}
+\end{table}
+\FloatBarrier
+\newpage
+
+
+\section{تحلیل تفصیلی - تکرار سوم}
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\begin{ganttchart}[
+			expand chart=1\textwidth,
+			vrule label font=\tiny,
+			title label font=\tiny, 
+			bar label font=\tiny, 
+			y unit title=1cm,
+			y unit chart=0.8cm,
+			x unit=1cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=0,
+			title right shift=0,
+			title height=1,
+			progress label text={},
+			bar height=0.6,
+			group right shift=0,
+			group top shift=.5,
+			group height=.2]{-5}{25}
+			
+			%labels
+			\gantttitle{خرداد}{6}
+			\gantttitle{تیر}{25}
+			\\
+			\gantttitle{\rl{هفته‌ی آخر}}{6} 
+			\gantttitle{\rl{هفته‌ی اول}}{7} 
+			\gantttitle{\rl{هفته‌ی دوم}}{7} 
+			\gantttitle{\rl{هفته‌ی سوم}}{7} 
+			\gantttitle{\rl{هفته‌ی چهارم}}{4} 
+			%
+			\\
+			%tasks
+			
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{-5}{0} \\
+			
+			\ganttgroup{\rl{نیازمندی‌ها}}{-5}{-2} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{-5}{-5} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{-4}{-2}\\
+			
+			\ganttgroup[name=analyze]{\rl{تحلیل}}{-1}{1} \\
+			\ganttbar[progress=0, name=update2]{\rl{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}}{-1}{1} \\
+			
+			\ganttgroup{\rl{طراحی‌}}{2}{15} \\			
+			\ganttbar[progress=0, name=class]{\rl{تهیه‌ی نمودار کلاس‌های طراحی}}{2}{5} \\			
+			\ganttbar[progress=0, name=comp]{\rl{تهیه‌ی نمودار مولفه‌}}{6}{9} \\
+			\ganttbar[progress=0, name=seq]{\rl{تهیه‌ی نمودار توالی طراحی‌}}{10}{15} \\
+			
+			\ganttgroup{\rl{پیاده‌سازی}}{16}{22} \\			
+			\ganttbar[progress=0, name=back]{\rl{تکمیل بکند پیاده‌سازی نسخه‌ی اولیه سیستم‌}}{16}{20} \\
+			\ganttbar[progress=0, name=front]{\rl{تکمیل فرانت‌اند پیاده‌سازی نسخه‌ی اولیه سیستم‌}}{18}{22} \\			
+			
+			
+			\ganttgroup{\rl{آزمون}}{23}{25} \\
+			\ganttbar[progress=0, name=test, bar left shift=0.5]{\rl{ارزیابی دستاوردها}}{23}{24} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{23}{25} \\
+			
+			%relations 
+			
+			\ganttlink[link mid=0.1]{check}{test} 
+			\ganttlink{back} {front}			
+			\ganttlink{class} {comp}			
+			\ganttlink{comp} {seq}			
+			
+			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{گانت چارت زمان‌بندی تحلیل تفصیلی - تکرار سوم}
+\end{figure}
+
+\FloatBarrier
+\newpage
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
+		\hline
+		\calendarEntryWithName
+		{1.4}
+		{استخراج چک‌لیست از اسلایدهای درس}
+		{2}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{2.4}
+		{بروزرسانی زمان‌بندی}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{3.4}
+		{بروزرسانی و اصلاح محصولات نیازمندی‌های تکرار قبل}
+		{1}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{4.4}
+		{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}
+		{2}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{5.4}
+		{تهیه‌ی نمودار کلاس‌های طراحی}
+		{5}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{6.4}
+		{تهیه‌ی نمودار مولفه}
+		{3}
+		{علیرضا تاج‌میرریاحی}
+		
+		\calendarEntryWithName
+		{7.4}
+		{تهیه نمودارهای توالی طراحی}
+		{5}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{8.4}
+		{تکمیل بکند پیاده‌سازی نسخه‌ی اولیه سیستم}
+		{7}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{9.4}
+		{تکمیل فرانت‌اند پیاده‌سازی نسخه‌ی اولیه سیستم}
+		{7}
+		{صبا هاشمی}
+		
+		\calendarEntryWithName
+		{10.4}
+		{ارزیابی دستاوردها}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{11.4}
+		{تکمیل مستندات}
+		{2}
+		{مصطفی اوجاقی}
+		
+		
+	\end{tabular}
+	\caption{زمان‌بندی تحلیل تفصیلی - تکرار سوم}
+\end{table}
+\FloatBarrier
+\newpage
+\section{ساخت - تکرار اول}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\begin{ganttchart}[
+			expand chart=1\textwidth,
+			vrule label font=\tiny,
+			title label font=\tiny, 
+			bar label font=\tiny, 
+			y unit title=1cm,
+			y unit chart=0.8cm,
+			x unit=1cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=0,
+			title right shift=0,
+			title height=1,
+			progress label text={},
+			bar height=0.6,
+			group right shift=0,
+			group top shift=.5,
+			group height=.2]{-6}{10}
+			
+			%labels
+			\gantttitle{تیر}{7}
+			\gantttitle{مرداد}{10}
+			\\
+			\gantttitle{\rl{هفته‌ی آخر}}{7} 
+			\gantttitle{\rl{هفته‌ی اول}}{7} 
+			\gantttitle{\rl{هفته‌ی دوم}}{3} 
+			%
+			\\
+			%tasks
+			
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{-6}{-5} \\
+			
+			\ganttgroup{\rl{نیازمندی‌ها}}{-5}{-4} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{-5}{-5} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{-4}{-4}\\
+			
+			\ganttgroup[name=analyze]{\rl{تحلیل}}{-3}{-2} \\
+			\ganttbar[progress=0, name=update2]{\rl{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}}{-3}{-2} \\
+			
+			\ganttgroup{\rl{طراحی‌}}{-1}{5} \\			
+			\ganttbar[progress=0, name=class]{\rl{بروزرسانی کلاس‌های طراحی}}{-1}{2} \\			
+			\ganttbar[progress=0, name=seq]{\rl{بروزرسانی نمودارهای توالی طراحی‌}}{0}{3} \\
+			\ganttbar[progress=0, name=olgo]{\rl{توضیح الگوهای استفاده شده‌}}{4}{5} \\
+			\ganttbar[progress=0, name=db]{\rl{تهیه‌ی شمای پایگاه داده‌}}{4}{5} \\
+			
+			\ganttgroup{\rl{پیاده‌سازی}}{6}{10} \\			
+			\ganttbar[progress=0, name=back]{\rl{بکند نمونه اولیه تکامل یافته سیستم‌}}{6}{9} \\
+			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نمونه اولیه تکامل یافته سیستم‌}}{8}{10} \\			
+			
+			\ganttgroup{\rl{آزمون}}{10}{10} \\
+			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{10}{10} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{10}{10} \\
+			
+			%relations 
+			
+			\ganttlink[link mid=0.1]{check}{test} 
+			
+			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{گانت چارت زمان‌بندی ساخت - تکرار اول}
+\end{figure}
+
+\FloatBarrier
+\newpage
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
+		\hline
+		\calendarEntryWithName
+		{1.5}
+		{استخراج چک‌لیست از اسلایدهای درس}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{2.5}
+		{بروزرسانی زمان‌بندی}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{3.5}
+		{بروزرسانی و اصلاح محصولات نیازمندی‌های تکرار قبل}
+		{1}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{4.5}
+		{بروزرسانی و اصلاح محصولات تحلیل تکرار قبل}
+		{2}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{5.5}
+		{بروزرسانی نمودار کلاس‌های طراحی}
+		{3}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{6.5}
+		{بروزرسانی نمودارهای تولی طراحی}
+		{3}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{7.5}
+		{توضیح الگوهای استفاده شده}
+		{2}
+		{علیرضا تاجمیر ریاحی}
+		
+		\calendarEntryWithName
+		{8.5}
+		{تهیه‌ی شمای پایگاه داده}
+		{2}
+		{صبا هاشمی}
+		
+		\calendarEntryWithName
+		{9.5}
+		{ بکند نمونه اولیه تکامل یافته سیستم}
+		{5}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{10.5}
+		{فرانت‌اند پیاده‌سازی نسخه‌ی اولیه سیستم}
+		{5}
+		{صبا هاشمی}
+		
+		\calendarEntryWithName
+		{11.5}
+		{ارزیابی دستاوردها}
+		{2}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{12.5}
+		{تکمیل مستندات}
+		{2}
+		{مصطفی اوجاقی}
+		
+		
+	\end{tabular}
+	\caption{زمان‌بندی ساخت - تکرار اول}
+\end{table}
+\FloatBarrier
+\newpage
+
+\section{ساخت - تکرار دوم}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\begin{ganttchart}[
+			expand chart=1\textwidth,
+			vrule label font=\tiny,
+			title label font=\tiny, 
+			bar label font=\tiny, 
+			y unit title=1cm,
+			y unit chart=0.8cm,
+			x unit=1cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=0,
+			title right shift=0,
+			title height=1,
+			progress label text={},
+			bar height=0.6,
+			group right shift=0,
+			group top shift=.5,
+			group height=.2]{10}{24}
+			
+			%labels
+			\gantttitle{مرداد}{15}
+			\\
+			\gantttitle{\rl{10}}{1} 
+			\gantttitle{\rl{11}}{1} 
+			\gantttitle{\rl{12}}{1} 
+			\gantttitle{\rl{13}}{1} 
+			\gantttitle{\rl{14}}{1} 
+			\gantttitle{\rl{15}}{1} 
+			\gantttitle{\rl{16}}{1} 
+			\gantttitle{\rl{17}}{1} 
+			\gantttitle{\rl{18}}{1} 
+			\gantttitle{\rl{19}}{1} 
+			\gantttitle{\rl{20}}{1}
+			\gantttitle{\rl{21}}{1} 
+			\gantttitle{\rl{22}}{1} 
+			\gantttitle{\rl{23}}{1} 
+			\gantttitle{\rl{24}}{1} 
+			
+			%
+			\\
+			%tasks
+			
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{10}{11} \\
+			
+			\ganttgroup{\rl{نیازمندی‌ها}}{10}{13} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{10}{10} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{11}{11}\\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی اولویت‌ها و ریسک‌ها}}{11}{12}\\
+			\ganttbar[progress=0, name=update]{\rl{نسخه‌ی تکمیل شده‌ی بررسی تحقق موارد کاربرد}}{11}{13}\\
+			
+			\ganttgroup{\rl{طراحی‌}}{13}{14} \\			
+			\ganttbar[progress=0, name=class]{\rl{تهیه‌ی نمودار استقرار}}{13}{14} \\			
+			
+			\ganttgroup{\rl{پیاده‌سازی}}{14}{23} \\			
+			\ganttbar[progress=0, name=back]{\rl{بکند نسخه‌ی نهایی سیستم‌}}{14}{21} \\
+			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نسخه‌ی نهایی سیستم‌}}{15}{22} \\			
+			\ganttbar[progress=0, name=doc1]{\rl{تهیه‌ی مستند نصب سیستم‌}}{22}{23} \\			
+			\ganttbar[progress=0, name=doc2]{\rl{تهیه‌ی مستند استفاده از سیستم‌}}{22}{23} \\			
+			
+			\ganttgroup{\rl{آزمون}}{23}{24} \\
+			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{23}{24} \\			
+			\ganttbar[progress=0, name=test]{\rl{درستی‌سنجی }}{23}{24} \\		
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{24}{24} \\
+			
+			%relations 
+			
+			\ganttlink[link mid=0.1]{check}{test} 
+			\ganttlink[link mid=0.75]{back}{doc1} 
+			\ganttlink[link mid=0.5]{back}{doc2}			
+			\ganttlink[link mid=0.5]{front}{doc1} 
+			\ganttlink[link mid=0.25]{front}{doc2}
+			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{گانت چارت زمان‌بندی ساخت - تکرار دوم}
+\end{figure}
+\FloatBarrier
+\newpage
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.45\linewidth}|p{0.13\linewidth}|p{0.25\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & مسئول\\
+		\hline
+		\calendarEntryWithName
+		{1.6}
+		{استخراج چک‌لیست از اسلایدهای درس}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{2.6}
+		{بروزرسانی زمان‌بندی}
+		{0.5}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{3.6}
+		{بروزرسانی و اصلاح محصولات نیازمندی‌های تکرار قبل}
+		{1}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{4.6}
+		{بروزرسانی اولویت‌ها و ریسک‌ها}
+		{2}
+		{مصطفی اوجاقی}
+		\calendarEntryWithName
+		{5.6}
+		{نسخه‌ی تکمیل شده‌ی بررسی تحقق موارد کاربرد}
+		{2}
+		{علیرضا تاجمیر ریاحی}
+		\calendarEntryWithName
+		{6.6}
+		{تهیه‌ی نمودار استقرار}
+		{2}
+		{مصطفی اوجاقی}
+		
+		\calendarEntryWithName
+		{7.6}
+		{ بکند نسخه‌ی نهایی سیستم}
+		{5}
+		{امیرمهدی نامجو}
+		
+		\calendarEntryWithName
+		{8.6}
+		{فرانت‌اند نسخه‌ی نهایی سیستم}
+		{5}
+		{علیرضا تاجمیر ریاحی}
+		\calendarEntryWithName
+		{9.6}
+		{تهیه‌ی مستند نصب سیستم}
+		{1}
+		{صبا هاشمی}
+		\calendarEntryWithName
+		{10.6}
+		{تهیه‌ی مستند استفاده از  سیستم}
+		{1}
+		{صبا هاشمی}
+		
+		\calendarEntryWithName
+		{11.6}
+		{ارزیابی دستاوردها}
+		{1}
+		{علیرضا تاج‌میرریاحی}
+		\calendarEntryWithName
+		{12.6}
+		{درستی‌سنجی}
+		{2}
+		{امیرمهدی نامجو}
+		\calendarEntryWithName
+		{13.6}
+		{تکمیل مستندات}
+		{2}
+		{مصطفی اوجاقی}
+		
+		
+	\end{tabular}
+	\caption{زمان‌بندی ساخت - تکرار دوم}
+\end{table}
+
+\FloatBarrier
+\newpage
+
+\section{گذار - تکرار اول}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{0.07\linewidth}|p{0.35\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|} 
+		
+		\hline
+		شناسه & نام وظیفه & تخمین (نفر-روز) & شروع & پایان\\
+		\hline
+		\calendarEntryWithoutDep
+		{49}
+		{تحویل نهایی}
+		{1}
+		{5/25}
+		{5/25}
+		
+		
+		
+	\end{tabular}
+	
+	\caption{زمان‌بندی گذار - تکرار اول}
+\end{table}
