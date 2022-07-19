@@ -3237,3 +3237,84 @@
 	{
 		روند جایگزین: ویرایش همه اطلاعات: معتبر نبودن اطلاعات جدید
 	}
+
+
+\newpage
+\subsection{زیرسیستم چت}
+
+% مشاهده‌ی پیام‌ها
+{
+	\usecase
+	% name
+	{مشاهده‌ی پیام‌ها}
+	% id
+	{47}
+	% brief description
+	{}
+	% primary actors
+	{کاربر عادی}
+	% secondary actors
+	{}
+	% preconditons
+	{کاربر عادی به سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			مورد کاربرد با انتخاب «مشاهده‌ی پیام‌ها» در صفحه‌ی مشاهده‌ی درخواست‌ها توسط کاربر آغاز می‌شود.
+			\item
+			تمام پیام‌های ارسال شده و دریافت شده به کاربر مورد نظر نمایش داده می‌شود.
+		\end{enumerate}
+	}
+	% postconditions
+	{پیام‌های تبادل‌شده با شخص مورد نظر نمایش داده می‌شود.}
+	% alternative flows
+	{}
+	% table name
+	{
+		مورد کاربرد: مشاهده‌ی پیام‌ها 
+	}
+}
+
+% ارسال پیام
+{
+	\usecase
+	% name
+	{ارسال پیام}
+	% id
+	{47}
+	% brief description
+	{}
+	% primary actors
+	{کاربر عادی}
+	% secondary actors
+	{}
+	% preconditons
+	{کاربر عادی به سیستم لاگین کرده باشد.}
+	% main flow
+	{
+		\vspace*{-0.6cm}
+		\begin{enumerate}
+			\item 
+			شامل (Include) مشاهده‌ی پیام‌ها
+			\item
+			کاربر پیام خود را وارد و آن را ارسال می‌کند.
+			\item
+			پیام به شخص مورد نظر ارسال می‌شود.
+		\end{enumerate}
+	}
+	% postconditions
+	{پیام به لیست پیام‌های تبادل شده میان دو کاربر اضافه می‌شود}
+	% alternative flows
+	{
+		\begin{itemize}
+			\item
+			انصراف
+		\end{itemize}
+	}
+	% table name
+	{
+		مورد کاربرد: ارسال پیام 
+	}
+}
