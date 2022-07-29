@@ -1,0 +1,495 @@
+
+\chapter{کارت‌های CRC}
+
+در این بخش کلاس‌های شناسایی شده‌ی سیستم به صورت کارت‌های CRC شامل نام، مسئولیت و کلاس‌های همکاری‌کننده در هر مسئولیت ذکر شده‌اند.
+علاوه بر آن برای هر کارت کلاس پدر، کلاس‌های فرزند و صفات اصلی که در کلاس نگه‌داری می‌شوند، برای داشتن دید بهتر نسبت به کلاس‌ها، اشاره شده‌اند. با توجه به این که نکات اساسی که باید در کارت‌های CRC ذکر شود، مسئولیت‌ها و کلاس‌های همکار هستند، مجموعه صفات ذکر شده کامل نیستند و در نمودار کلاس دقیق می‌شوند.
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+\crcheader	{درخواست}
+%parent
+{}
+%childs
+{}
+%description
+{نمایانگر یک درخواست خدمت که توسط مشتری ثبت می‌شود.}
+\crcattritem{مشتری}
+\crcattritem{تخصص مورد نیاز}
+\crcattritem{مکان نیاز به خدمت}
+\crcattritem{زمان نیاز به خدمت}
+\crcattritem{توضیحات}
+\crcattritem{متخصص}
+\crcattritem{وضعیت}
+\crcattritem{خاص بودن}
+
+\crcrespheader
+\crcrespitem{نگه‌داری و ارائه اطلاعات درخواست (شامل صفات بالا)}{تخصص، مکان}
+\crcrespitem{ویرایش تخصص مورد نیاز، توضیحات و مکان و زمان خدمت}{تخصص، مکان}
+\crcrespitem{اضافه کردن، ویرایش و حذف متخصص}{متخصص}
+\crcrespitem{بروزرسانی وضعیت درخواست}{متخصص، مشتری}
+	\hline
+		\end{tabular}
+	\caption{کارت درخواست}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ درخواست}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست درخواست‌های ثبت شده در سیستم.}
+		
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه لیست درخواست‌ها}{درخواست}
+		\crcrespitem{جست‌وجو در درخواست‌ها}{درخواست}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ درخواست}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{تخصص}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک تخصص قابل ارائه در سیستم.}
+		\crcattritem{نام}
+		\crcattritem{توضیحات}
+		\crcrespheader
+		\crcrespitem{ارائه و ویرایش نام و توضیحات}{}
+		\crcrespitem{نگه‌داری، ارائه و ویرایش تخصص‌های زیرحوزه}{}
+		\hline
+	\end{tabular}
+	\caption{کارت تخصص}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ تخصص}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست تخصص‌های موجود در سیستم.}
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی تخصص‌ها}{تخصص}
+		\crcrespitem{جست‌وجو در تخصص‌ها‌}{تخصص}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ تخصص}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{معیار ارزیابی}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک معیار ارزیابی که می‌تواند مربوط به متخصص یا مشتری باشد.}
+		\crcattritem{نام}
+		\crcattritem{توضیحات}		
+		\crcattritem{نوع کاربر مربوطه}		
+		\crcrespheader
+		\crcrespitem{ارائه نام و توضیحات و نوع کاربر مربوطه}{}
+		\crcrespitem{ویرایش نام و توضیحات و نوع کاربر مربوطه}{}
+		\hline
+	\end{tabular}
+	\caption{کارت معیار ارزیابی}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ معیار ارزیابی}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست معیارهای ارزیابی موجود در سیستم.}
+
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی لیست معیارهای ارزیابی}{معیار ارزیابی}
+		\crcrespitem{جست‌وجو معیار ارزیابی}{معیار ارزیابی}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ معیار ارزیابی}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{بازخورد}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک بازخورد توسط یک کاربر عادی به یک درخواست.}
+		\crcattritem{معیار ارزیابی}
+		\crcattritem{امتیاز}
+		\crcattritem{توضیحات}
+		\crcattritem{درخواست}
+		\crcrespheader
+		\crcrespitem{ثبت مقدار کمی امتیاز برای معیار ارزیابی}{معیار ارزیابی}
+		\crcrespitem{ثبت توضیحات برای معیار ارزیابی}{معیار ارزیابی}
+		\crcrespitem{نگه‌داری و ارائه اطلاعات مربوط به بازخورد (شامل صفاتی که در بالا ذکر شده)}{معیار ارزیابی، درخواست}
+		\hline
+	\end{tabular}
+	\caption{کارت بازخورد}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ بازخورد}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست بازخوردهای ثبت شده در سیستم.}
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی لیست بازخوردها}{بازخورد، مدیر شرکت}
+		\crcrespitem{جست‌وجو و فیلتر بازخوردها}{بازخورد، مدیر شرکت}
+		\crcrespitem{مرتب‌سازی بازخوردها}{بازخورد، مدیر شرکت}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ بازخورد}
+\end{table}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{بازخورد سامانه}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک پیشنهاد یا انتقاد ثبت شده می‌تواند از نوع مشکل فنی باشد.}
+		\crcattritem{توضیحات}
+		\crcattritem{کاربر}		
+		\crcattritem{نوع}	
+		\crcattritem{وضعیت}		
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه اطلاعات مربوطه (شامل صفات بالا)}{}
+		\crcrespitem{تغییر وضعیت بازخورد}{}
+		\hline
+	\end{tabular}
+	\caption{کارت بازخورد سامانه}
+\end{table}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ بازخورد سامانه}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست بازخوردهای محصول.}
+
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی لیست بازخوردهای محصول }{بازخورد سامانه}
+		\crcrespitem{ارائه‌ی بازخوردها بر حسب نوع}{بازخورد سامانه}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ بازخورد سامانه}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مکان}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر یک موقعیت مکانی.}
+		\crcattritem{موقعیت جغرافیایی}
+		\crcattritem{آدرس}
+		\crcrespheader
+		\crcrespitem{نگه‌داری موقعیت جغرافیایی و آدرس}{}
+		\crcrespitem{ارائه موقعیت جغرافیایی و آدرس}{}
+		
+		\hline
+	\end{tabular}
+	\caption{کارت مکان}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{امتیاز لازم پذیرش درخواست}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر امتیاز لازم برای پذیرش تعداد مشخصی درخواست.}
+		\crcattritem{امتیاز}
+		\crcattritem{تعداد درخواست}
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی امتیاز و تعداد درخواست}{}
+		\hline
+	\end{tabular}
+	\caption{کارت امتیاز لازم پذیرش درخواست}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ امتیاز لازم پذیرش درخواست }
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست امتیازات لازم برای پذیرش تعداد درخواست‌های مختلف.}
+		\crcrespheader
+		\crcrespitem{نگه‌داری و ارائه‌ی لیست مرتب‌شده‌ی امتیاز لازم پذیرش درخواست}{}
+		\crcrespitem{جست‌وجو در لیست امتیاز لازم پذیرش درخواست}{}
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ امتیاز لازم پذیرش درخواست}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاربر}
+		%parent
+		{}
+		%childs
+		{کاربر عادی، مدیر شرکت، مدیر فنی}
+		%description
+		{نمایانگر هر کسی که می‌تواند وارد سیستم شود.}
+		\crcattritem{نام}
+		\crcattritem{نام‌کاربری}
+		\crcattritem{کلمه‌ی عبور}
+		\crcattritem{شماره‌ی تماس}
+		\crcrespheader
+		\crcrespitem{نگهداری و ارائه‌ی اطلاعات مربوط به کاربر (شامل صفات بالا)}{}
+		\crcrespitem{احراز هویت}{}
+		\crcrespitem{خروج}{}		
+		\crcrespitem{ویرایش اطلاعات}{}		
+		\hline
+	\end{tabular}
+	\caption{کارت کاربر}
+\end{table}
+
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ کاربر}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست کاربران.}
+		\crcrespheader
+		\crcrespitem{نگه‌داری لیست کاربران}{کاربر}		
+		\crcrespitem{ارائه لیست کاربران}{کاربر}		
+		\crcrespitem{جست‌وجو در لیست کاربران}{کاربر}		
+		\hline
+	\end{tabular}
+	\caption{کارت کاتالوگ کاربر}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاربر عادی}
+		%parent
+		{کاربر}
+		%childs
+		{مشتری، متخصص}
+		%description
+		{نمایانگر کاربرانی که مدیر نیستند.}
+		\crcattritem{امتیاز}
+		\crcrespheader
+		\crcrespitem{ثبت نام}{کاربر، کاتالوگ کاربر}		
+		\crcrespitem{ارسال و دریافت پیام}{پیام، کاربر عادی}	
+		\crcrespitem{نگهداری، بروزرسانی و ارائه‌ی امتیاز}{بازخورد}	
+				\hline
+	\end{tabular}
+	\caption{کارت کاربر عادی}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مشتری}
+		%parent
+		{کاربر عادی}
+		%childs
+		{}
+		%description
+		{نمایانگر سفارش‌دهندگان خدمات.}
+		\crcrespheader
+		\crcrespitem{ثبت، ویرایش و لغو درخواست}{کاتالوگ درخواست، درخواست}
+		\crcrespitem{انتخاب، پذیرش، یا رد متخصص}{متخصص، درخواست}
+		\crcrespitem{ثبت بازخورد}{بازخورد، درخواست}
+		\hline
+	\end{tabular}
+	\caption{کارت مشتری}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{متخصص}
+		%parent
+		{کاربر عادی}
+		%childs
+		{}
+		%description
+		{نمایانگر ارائه‌دهندگان خدمات.}
+		\crcattritem{تخصص‌ها}
+
+		\crcattritem{مدارک}
+		\crcrespheader
+		\crcrespitem{نگه‌داری، ویرایش و ارائه‌ی تخصص‌ها}{تخصص}
+		\crcrespitem{نگه‌داری، ویرایش و ارائه‌ی مدارک}{}
+		\crcrespitem{ثبت زمان انجام شدن خدمت}{بازخورد}		
+		\crcrespitem{پذیرش یا رد درخواست}{درخواست، مشتری}		
+		\hline
+	\end{tabular}
+	\caption{کارت متخصص}
+\end{table}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاربر مدیر}
+		%parent
+		{کاربر}
+		%childs
+		{مدیر شرکت، مدیر فنی}
+		%description
+		{نمایانگر کاربران دارای دسترسی مدیریتی.}
+		\crcrespheader
+		\crcrespitem{مدیریت متخصصان}{متخصص، کاتالوگ کاربر}
+		\crcrespitem{مدیریت درخواست‌ها}{کاتالوگ درخواست، درخواست، کاربر عادی}
+				\hline
+	\end{tabular}
+	\caption{کارت کاربر مدیر}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مدیر شرکت}
+		%parent
+		{کاربر}
+		%childs
+		{}
+		%description
+		{نمایانگر کاربری که مسئولیت مدیریت سامانه را دارد.}
+		\crcrespheader
+		\crcrespitem{اضافه کردن مدیر جدید}{مدیر فنی}
+		\crcrespitem{مدیریت تخصص‌ها}{تخصص، کاتالوگ تخصص}
+		\crcrespitem{مدیریت معیارهای ارزیابی}{معیار ارزیابی، کاتالوگ معیار ارزیابی}	
+		\hline
+	\end{tabular}
+	\caption{کارت مدیر شرکت}
+\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{مدیر فنی}
+		%parent
+		{کاربر}
+		%childs
+		{}
+		%description
+		{نمایانگر کاربری که وظیفه‌ی رسیدگی به مشکلات فنی سیستم را دارد.}
+		\crcrespheader
+		\crcrespitem{پاسخ به مشکلات فنی}{بازخورد سامانه، کاتالوگ بازخورد سامانه}
+		\crcrespitem{مدیریت اطلاعات کل سیستم}{کاربر، درخواست، معیار ارزیابی، بازخورد}
+		\hline
+	\end{tabular}
+	\caption{کارت مدیر فنی}
+\end{table}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{پیام}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر متنی که بین دو کاربر رد و بدل می‌شود.}
+		\crcattritem{کاربر فرستنده}
+		\crcattritem{کاربر گیرنده}
+		\crcattritem{درخواست}
+		\crcattritem{متن}
+		\crcrespheader
+
+		\crcrespitem{نگه‌داری و ارائه اطلاعات‌ (شامل صفات بالا)}{کاربر، درخواست}
+		\hline
+		
+	\end{tabular}
+	\caption{کارت پیام}
+\end{table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{0.45\linewidth}|p{0.45\linewidth}|} 
+		\crcheader	{کاتالوگ پیام}
+		%parent
+		{}
+		%childs
+		{}
+		%description
+		{نمایانگر لیست پیام‌های رد و بدل شده در سیستم.}
+		\crcrespheader
+		
+		\crcrespitem{نگه‌داری و ارائه‌ی پیام‌ها}{پیام}
+		\hline
+		
+	\end{tabular}
+	\caption{کارت کاتالوگ پیام}
+\end{table}
+
+
