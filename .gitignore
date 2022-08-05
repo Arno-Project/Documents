@@ -322,10 +322,13 @@ TSWLatexianTemp*
 !2-Elaboration-first-iteration/figs/*.pdf
 !3-Elaboration-second-iteration/figs/*.pdf
 !4-Elaboration-third-iteration/figs/*.pdf
-!Phase5/figs/*.pdf
+!5-Construction-first-iteration/figs/*.pdf
+!6-Construction-second-iteration/figs/*.pdf
 
 !1-Inception-first-iteration/figs/**/*.pdf
 !2-Elaboration-first-iteration/figs/**/*.pdf
 !3-Elaboration-second-iteration/figs/**/*.pdf
 !4-Elaboration-third-iteration/figs/**/*.pdf
-!Phase5/figs/**/*.pdf
+!5-Construction-first-iteration/figs/**/*.pdf
+!6-Construction-second-iteration/figs/**/*.pdf
+
