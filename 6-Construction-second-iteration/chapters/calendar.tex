@@ -658,15 +658,15 @@
 			bar height=0.6,
 			group right shift=0,
 			group top shift=.5,
-			group height=.2]{-6}{10}
+			group height=.2]{-6}{14}
 			
 			%labels
 			\gantttitle{تیر}{7}
-			\gantttitle{مرداد}{10}
+			\gantttitle{مرداد}{14}
 			\\
 			\gantttitle{\rl{هفته‌ی آخر}}{7} 
 			\gantttitle{\rl{هفته‌ی اول}}{7} 
-			\gantttitle{\rl{هفته‌ی دوم}}{3} 
+			\gantttitle{\rl{هفته‌ی دوم}}{7} 
 			%
 			\\
 			%tasks
@@ -686,18 +686,20 @@
 			\ganttbar[progress=0, name=olgo]{\rl{توضیح الگوهای استفاده شده‌}}{4}{5} \\
 			\ganttbar[progress=0, name=db]{\rl{تهیه‌ی شمای پایگاه داده‌}}{4}{5} \\
 			
-			\ganttgroup{\rl{پیاده‌سازی}}{6}{10} \\			
-			\ganttbar[progress=0, name=back]{\rl{بکند نمونه اولیه تکامل یافته سیستم‌}}{6}{9} \\
-			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نمونه اولیه تکامل یافته سیستم‌}}{8}{10} \\			
+			\ganttgroup{\rl{پیاده‌سازی}}{6}{13} \\			
+			\ganttbar[progress=0, name=back]{\rl{بکند نمونه اولیه تکامل یافته سیستم‌}}{6}{10} \\
+			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نمونه اولیه تکامل یافته سیستم‌}}{8}{13} \\			
 			
-			\ganttgroup{\rl{آزمون}}{10}{10} \\
-			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{10}{10} \\			
-			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{10}{10} \\
+			\ganttgroup{\rl{آزمون}}{14}{14} \\
+			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{14}{14} \\			
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{14}{14} \\
 			
 			%relations 
 			
+	
 			\ganttlink[link mid=0.1]{check}{test} 
-			
+				\ganttlink[link mid=0.1]{class}{olgo} 		
+				\ganttlink[link mid=0.1]{class}{db} 		
 			%			\ganttvrule[vrule/.append style={blue, thin},vrule offset=1]{\rl{گزارش اول}}{6}
 			
 		\end{ganttchart}
@@ -809,15 +811,11 @@
 			bar height=0.6,
 			group right shift=0,
 			group top shift=.5,
-			group height=.2]{10}{24}
+			group height=.2]{14}{31}
 			
 			%labels
-			\gantttitle{مرداد}{15}
+			\gantttitle{مرداد}{18}
 			\\
-			\gantttitle{\rl{10}}{1} 
-			\gantttitle{\rl{11}}{1} 
-			\gantttitle{\rl{12}}{1} 
-			\gantttitle{\rl{13}}{1} 
 			\gantttitle{\rl{14}}{1} 
 			\gantttitle{\rl{15}}{1} 
 			\gantttitle{\rl{16}}{1} 
@@ -829,32 +827,39 @@
 			\gantttitle{\rl{22}}{1} 
 			\gantttitle{\rl{23}}{1} 
 			\gantttitle{\rl{24}}{1} 
-			
+			\gantttitle{\rl{25}}{1} 
+			\gantttitle{\rl{26}}{1} 
+			\gantttitle{\rl{27}}{1} 
+			\gantttitle{\rl{28}}{1} 
+			\gantttitle{\rl{29}}{1} 
+			\gantttitle{\rl{30}}{1} 
+			\gantttitle{\rl{31}}{1} 
+						
 			%
 			\\
 			%tasks
 			
-			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{10}{11} \\
+			\ganttbar[progress=0, name=check]{\rl{استخراج چک‌لیست از اسلایدهای درس}}{14}{15} \\
 			
-			\ganttgroup{\rl{نیازمندی‌ها}}{10}{13} \\
-			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{10}{10} \\
-			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{11}{11}\\
-			\ganttbar[progress=0, name=update]{\rl{بروزرسانی اولویت‌ها و ریسک‌ها}}{11}{12}\\
-			\ganttbar[progress=0, name=update]{\rl{نسخه‌ی تکمیل شده‌ی بررسی تحقق موارد کاربرد}}{11}{13}\\
+			\ganttgroup{\rl{نیازمندی‌ها}}{14}{20} \\
+			\ganttbar[progress=0, name=sched]{\rl{بروزرسانی زمان‌بندی}}{14}{14} \\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی و اصلاح محصولات نیازمندی تکرار قبل}}{14}{16}\\
+			\ganttbar[progress=0, name=update]{\rl{بروزرسانی اولویت‌ها و ریسک‌ها}}{14}{16}\\
+			\ganttbar[progress=0, name=update]{\rl{نسخه‌ی تکمیل شده‌ی بررسی تحقق موارد کاربرد}}{16}{20}\\
 			
-			\ganttgroup{\rl{طراحی‌}}{13}{14} \\			
-			\ganttbar[progress=0, name=class]{\rl{تهیه‌ی نمودار استقرار}}{13}{14} \\			
+			\ganttgroup{\rl{طراحی‌}}{15}{16} \\			
+			\ganttbar[progress=0, name=class]{\rl{تهیه‌ی نمودار استقرار}}{15}{16} \\			
 			
-			\ganttgroup{\rl{پیاده‌سازی}}{14}{23} \\			
-			\ganttbar[progress=0, name=back]{\rl{بکند نسخه‌ی نهایی سیستم‌}}{14}{21} \\
-			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نسخه‌ی نهایی سیستم‌}}{15}{22} \\			
-			\ganttbar[progress=0, name=doc1]{\rl{تهیه‌ی مستند نصب سیستم‌}}{22}{23} \\			
-			\ganttbar[progress=0, name=doc2]{\rl{تهیه‌ی مستند استفاده از سیستم‌}}{22}{23} \\			
+			\ganttgroup{\rl{پیاده‌سازی}}{15}{31} \\			
+			\ganttbar[progress=0, name=back]{\rl{بکند نسخه‌ی نهایی سیستم‌}}{15}{30} \\
+			\ganttbar[progress=0, name=front]{\rl{فرانت‌اند نسخه‌ی نهایی سیستم‌}}{15}{30} \\			
+			\ganttbar[progress=0, name=doc1]{\rl{تهیه‌ی مستند نصب سیستم‌}}{30}{31} \\			
+			\ganttbar[progress=0, name=doc2]{\rl{تهیه‌ی مستند استفاده از سیستم‌}}{30}{31} \\			
 			
-			\ganttgroup{\rl{آزمون}}{23}{24} \\
-			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{23}{24} \\			
-			\ganttbar[progress=0, name=test]{\rl{درستی‌سنجی }}{23}{24} \\		
-			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{24}{24} \\
+			\ganttgroup{\rl{آزمون}}{30}{31} \\
+			\ganttbar[progress=0, name=test]{\rl{ارزیابی دستاوردها}}{31}{31} \\			
+			\ganttbar[progress=0, name=test]{\rl{درستی‌سنجی }}{31}{31} \\		
+			\ganttbar[progress=0]{\rl{تکمیل مستندات}}{30}{31} \\
 			
 			%relations 
 			
@@ -883,7 +888,7 @@
 		{1.6}
 		{استخراج چک‌لیست از اسلایدهای درس}
 		{1}
-		{صبا هاشمی}
+		{علیرضا تاجمیر ریاحی}
 		\calendarEntryWithName
 		{2.6}
 		{بروزرسانی زمان‌بندی}
@@ -893,12 +898,12 @@
 		{3.6}
 		{بروزرسانی و اصلاح محصولات نیازمندی‌های تکرار قبل}
 		{1}
-		{امیرمهدی نامجو}
+			{صبا هاشمی}
 		\calendarEntryWithName
 		{4.6}
 		{بروزرسانی اولویت‌ها و ریسک‌ها}
 		{2}
-		{مصطفی اوجاقی}
+		{صبا هاشمی}
 		\calendarEntryWithName
 		{5.6}
 		{نسخه‌ی تکمیل شده‌ی بررسی تحقق موارد کاربرد}
@@ -925,12 +930,12 @@
 		{9.6}
 		{تهیه‌ی مستند نصب سیستم}
 		{1}
-		{صبا هاشمی}
+			{مصطفی اوجاقی}
 		\calendarEntryWithName
 		{10.6}
-		{تهیه‌ی مستند استفاده از  سیستم}
+		{تهیه‌ی مستند استفاده از سیستم}
 		{1}
-		{صبا هاشمی}
+		{مصطفی اوجاقی}
 		
 		\calendarEntryWithName
 		{11.6}
@@ -969,8 +974,8 @@
 		{49}
 		{تحویل نهایی}
 		{1}
-		{5/25}
-		{5/25}
+		{6/2}
+		{6/2}
 		
 		
 		
