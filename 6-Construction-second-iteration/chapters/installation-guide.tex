@@ -1,0 +1,36 @@
+\chapter{راهنمای نصب}
+
+آرنو برای سهولت در نصب و راه‌اندازی و استقلال از سکوی مورد استفاده از \lr{Docker} و \lr{Docker Compose} استفاده می‌کند.
+بنابراین پیش از اجرای آن باید این دو پیش‌نیاز به ترتیب زیر نصب شوند. پس از آن طبق توضیحات می‌توان آرنو را اجرا کرد.
+توصیه‌ی ما نصب و اجرای آرنو بر روی یک سرور لینوکسی است اما می‌توان برای امتحان کردن محصول، آن را برروی رایانه‌ی شخصی نیز نصب و استفاده کرد.
+همچنین برای یکپارچه‌سازی دستورات اجرا از make استفاده شده است که می‌توانید آن را به راحتی با کمک مدیر بسته‌ی سیستم‌عامل خود (apt برای debian, choco برای Windows و brew برای macOS) نصب کنید.
+
+\section{نصب Docker}
+
+برای نصب Docker روی سیستم‌های لینوکسی مطابق توضیحات داده‌شده در \href{https://docs.docker.com/compose/install/compose-plugin/#install-using-the-repository}{این لینک} عمل کنید. 
+همچنین برای نصب آن روی رایانه‌های شخصی می‌توانید براساس سیستم‌عامل خود از راهنمای موجود در \href{https://docs.docker.com/get-docker/}{این صفحه} استفاده کنید.
+
+\section{نصب \lr{Docker Compose}}
+
+اگر برای نصب داکر از روشی غیر از نصب \lr{Docker Desktop} استفاده کرده‌اید لازم است تا به صورت جداگانه \lr{Docker Compose} را با استفاده از دستور زیر نصب کنید.
+\lstset{language=Bash}
+\lstset{frame=lines}
+\lstset{caption={Installing Docker Compose}}
+\lstset{label={lst:code_direct}}
+\begin{latin}
+\begin{lstlisting}
+sudo apt install docker-compose
+\end{lstlisting}
+\end{latin}
+
+\section{اجرای آرنو}
+
+برای اجرای آرنو باید ابتدا کدهای آن را از دو مخزن
+\href{https://github.com/Arno-Project/Frontend}{Frontend} و
+\href{https://github.com/Arno-Project/Backend}{Backend}
+دریافت کنید.
+در پوشه‌ی backend فایل \lr{.env.template} را کپی کرده و با نام \lr{.env} ذخیره کرده و مقادیر خالی را درون آن پر کنید.
+سپس در هر مخزن به شاخه‌ای که Makefile در آن قرار دارد رفته و دستور \lr{make build} را اجرا کنید.
+این دستور پس از دریافت و ساخت \lr{docker image} های مورد نیاز، آن‌ها را در پس زمینه اجرا می‌کند.
+
+برای توقف اجرای برنامه در همان شاخه از دستور \lr{make down} و برای اجرای مجدد آن از \lr{make up} استفاده کنید.
